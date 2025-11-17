@@ -1,0 +1,1713 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Organic Shop Nepal</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="tailwind.config.js"></script>
+  </head>
+  <body class="flex flex-col gap-8">
+    <!-- NavBar -->
+    <nav class="px-6 py-8 flex items-center justify-between lg:px-12 lg:py-4">
+      <div class="flex items-center gap-2 lg:gap-6">
+        <a href="index.html">
+          <img
+            src="assets/Resuable/logo.svg"
+            alt="Organic Shop Nepal Logo"
+            width="43"
+            height="43"
+          />
+        </a>
+        <ul
+          id="navMenu"
+          class="hidden lg:flex items-center gap-6 text-xl font-semibold leading-5 tracking-wide"
+        >
+          <li>
+            <a href="index.html" class="text-[#39A116] border-b-2 border-[#39A116] pb-1">Shop</a>
+          </li>
+          <li>
+            <a href="product.html" class="hover:text-[#39A116] transition-colors duration-300">Products</a>
+          </li>
+          <li>
+            <a href="index.html" class="hover:text-[#39A116] transition-colors duration-300">Gallery</a>
+          </li>
+          <li>
+            <a href="index.html" class="hover:text-[#39A116] transition-colors duration-300">About</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="flex items-center gap-2 lg:gap-4">
+        <div
+          class="hidden lg:flex w-[254px] px-2.5 py-1.5 bg-[#E8E8E8] rounded-full gap-2.5"
+        >
+          <img
+            src="assets/Resuable/search.svg"
+            alt="Search Icon"
+            width="20"
+            height="20"
+          />
+          <input
+            type="text"
+            placeholder="Search Product..."
+            class="text-lg placeholder:text-muted outline-0 border-0 flex-1 w-full bg-transparent"
+          />
+        </div>
+
+        <a
+          href="cart.html"
+          class="rounded-full p-2.5 flex items-center justify-center bg-primary-800 hover:bg-[#2d8011] transition-colors duration-300"
+        >
+          <img
+            src="assets/Resuable/cart.svg"
+            alt="Cart Icon"
+            width="20"
+            height="20"
+          />
+        </a>
+
+        <button
+          class="rounded-full p-2.5 flex items-center justify-center bg-primary-800 hover:bg-[#2d8011] transition-colors duration-300"
+        >
+          <img
+            src="assets/Resuable/person.svg"
+            alt="Account Icon"
+            width="20"
+            height="20"
+          />
+        </button>
+
+        <!-- Hamburger Menu Icon -->
+        <button
+          id="hamburger"
+          class="lg:hidden flex flex-col gap-1.5 p-2 focus:outline-none"
+        >
+          <span
+            class="block w-6 h-0.5 bg-black transition-transform duration-300"
+          ></span>
+          <span
+            class="block w-6 h-0.5 bg-black transition-opacity duration-300"
+          ></span>
+          <span
+            class="block w-6 h-0.5 bg-black transition-transform duration-300"
+          ></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu">
+      <ul class="flex flex-col gap-4 p-4">
+        <li>
+          <a href="index.html">Shop</a>
+        </li>
+        <li>
+          <a href="product.html">Products</a>
+        </li>
+        <li>
+          <a href="index.html">Gallery</a>
+        </li>
+        <li>
+          <a href="index.html">About</a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Hero Section -->
+    <hero class="px-6 py-8 lg:px-12 lg:py-6 flex flex-col w-full">
+      <div class="grid grid-cols-1 md:grid-cols-2 1220:grid-cols-2 w-full items-center gap-8 1220:gap-0">
+        <div class="col-span-1 flex flex-col gap-8 1220:gap-12 w-full 1220:w-[500px]">
+          <div class="flex flex-col gap-2">
+            <h1 class="text-3xl md:text-4xl 1220:text-5xl font-bold tracking-tighter leading-tight 1220:leading-14">
+              Let your <span class="text-primary-700">groceries</span> come to
+              you
+            </h1>
+            <p class="text-sm md:text-base 1220:text-base">
+              Get fresh groceries online without stepping out to make delicious
+              food with the freshest ingredients
+            </p>
+          </div>
+          <div class="flex flex-col gap-5">
+            <div
+              class="flex items-center w-full 1220:max-w-[400px] bg-[#E8E8E8] h-12 md:h-[52px] rounded-lg overflow-hidden"
+            >
+              <input
+                type="text"
+                placeholder="Search Product..."
+                class="text-sm md:text-lg placeholder:text-muted outline-0 border-0 flex-1 w-full bg-transparent px-2.5"
+              />
+
+              <button class="flex items-center h-full bg-primary-700 px-3">
+                <img
+                  src="assets/Resuable/search-white.svg"
+                  alt="Search Icon"
+                  width="20"
+                  height="20"
+                />
+              </button>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 1220:gap-4">
+              <div class="col-span-1 flex items-center gap-2">
+                <img
+                  src="assets/Homepage//Hero/check.svg"
+                  alt=""
+                  width="16"
+                  height="16"
+                  class="md:w-5 md:h-5"
+                />
+                <p class="text-xs md:text-sm 1220:text-base">Fresh Vegetables</p>
+              </div>
+              <div class="col-span-1 flex items-center gap-2">
+                <img
+                  src="assets/Homepage//Hero/check.svg"
+                  alt=""
+                  width="16"
+                  height="16"
+                  class="md:w-5 md:h-5"
+                />
+                <p class="text-xs md:text-sm 1220:text-base">100% Guarantee</p>
+              </div>
+              <div class="col-span-1 flex items-center gap-2">
+                <img
+                  src="assets/Homepage//Hero/check.svg"
+                  alt=""
+                  width="16"
+                  height="16"
+                  class="md:w-5 md:h-5"
+                />
+                <p class="text-xs md:text-sm 1220:text-base">Cash on Delivery</p>
+              </div>
+              <div class="col-span-1 flex items-center gap-2">
+                <img
+                  src="assets/Homepage//Hero/check.svg"
+                  alt=""
+                  width="16"
+                  height="16"
+                  class="md:w-5 md:h-5"
+                />
+                <p class="text-xs md:text-sm 1220:text-base">Fast Delivery</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Desktop Girl Image & Cards (1220px+) -->
+        <div class="hidden 1220:flex col-span-1 h-full overflow-visible">
+          <div class="relative h-full w-full -z-10">
+            <img
+              src="assets/Homepage/Hero/girl.png"
+              alt=""
+              class="h-full object-cover w-fit overflow-visible"
+            />
+            <div
+              class="absolute -z-10 top-1/2 left-1/2 w-[400px] h-[400px] border-2 border-secondary-300 rounded-xl transform -translate-y-1/2 -translate-x-1/2 rotate-45"
+            ></div>
+            <div
+              class="absolute -z-10 top-1/2 left-1/2 w-[400px] h-[400px] border-2 border-secondary-300 rounded-xl transform -translate-y-1/2 -translate-x-1/2 -rotate-12"
+            ></div>
+          </div>
+          <div class="flex flex-col h-full gap-4">
+            <div
+              class="flex flex-col items-center px-6 py-4 border-muted border bg-[#F381600D] rounded-2xl gap-2"
+            >
+              <div
+                class="bg-white p-4 rounded-2xl shadow-sm w-[160px] h-[120px]"
+              >
+                <img
+                  src="assets/Homepage/Hero/spinach-PVB3BJ8.png"
+                  alt=""
+                  class="w-full h-full object-contain"
+                />
+              </div>
+              <div class="flex flex-col items-center text-center">
+                <h4 class="text-lg text-dark font-normal">Fresh Spinach</h4>
+                <h4 class="text-secondary-500 text-lg font-normal">$12.00</h4>
+              </div>
+            </div>
+            <div
+              class="flex flex-col items-center px-6 py-4 border-muted border bg-[#F381600D] rounded-2xl gap-2"
+            >
+              <div
+                class="bg-white p-4 rounded-2xl shadow-sm w-[160px] h-[120px]"
+              >
+                <img
+                  src="assets/Homepage/Hero/fresh-carrots-QEAUF2R.png"
+                  alt=""
+                  class="w-full h-full object-contain"
+                />
+              </div>
+              <div class="flex flex-col items-center text-center">
+                <h4 class="text-lg text-dark font-normal">Fresh Carrots</h4>
+                <h4 class="text-secondary-500 text-lg font-normal">$12.00</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tablet Featured Products (md: to 1220px) -->
+        <div class="hidden md:grid 1220:hidden col-span-1 grid-cols-2 gap-3">
+          <div
+            class="flex flex-col items-center px-3 py-3 border border-light bg-[#F381600D] rounded-lg gap-2"
+          >
+            <div
+              class="bg-white p-3 rounded-lg w-full h-24"
+            >
+              <img
+                src="assets/Homepage/Hero/spinach-PVB3BJ8.png"
+                alt=""
+                class="w-full h-full object-contain"
+              />
+            </div>
+            <div class="flex flex-col items-center text-center">
+              <h4 class="text-sm font-medium">Fresh Spinach</h4>
+              <h4 class="text-sm text-secondary-500 font-semibold">$12.00</h4>
+            </div>
+          </div>
+          <div
+            class="flex flex-col items-center px-3 py-3 border border-light bg-[#F381600D] rounded-lg gap-2"
+          >
+            <div
+              class="bg-white p-3 rounded-lg w-full h-24"
+            >
+              <img
+                src="assets/Homepage/Hero/fresh-carrots-QEAUF2R.png"
+                alt=""
+                class="w-full h-full object-contain"
+              />
+            </div>
+            <div class="flex flex-col items-center text-center">
+              <h4 class="text-sm font-medium">Fresh Carrots</h4>
+              <h4 class="text-sm text-secondary-500 font-semibold">$12.00</h4>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mobile Featured Products (below md:) -->
+        <div class="md:hidden col-span-1 grid grid-cols-2 gap-3">
+          <div
+            class="flex flex-col items-center px-3 py-3 border border-light bg-[#F381600D] rounded-lg gap-2"
+          >
+            <div
+              class="bg-white p-3 rounded-lg w-full h-24"
+            >
+              <img
+                src="assets/Homepage/Hero/spinach-PVB3BJ8.png"
+                alt=""
+                class="w-full h-full object-contain"
+              />
+            </div>
+            <div class="flex flex-col items-center text-center">
+              <h4 class="text-xs md:text-sm font-medium">Fresh Spinach</h4>
+              <h4 class="text-xs md:text-sm text-secondary-500 font-semibold">$12.00</h4>
+            </div>
+          </div>
+          <div
+            class="flex flex-col items-center px-3 py-3 border border-light bg-[#F381600D] rounded-lg gap-2"
+          >
+            <div
+              class="bg-white p-3 rounded-lg w-full h-24"
+            >
+              <img
+                src="assets/Homepage/Hero/fresh-carrots-QEAUF2R.png"
+                alt=""
+                class="w-full h-full object-contain"
+              />
+            </div>
+            <div class="flex flex-col items-center text-center">
+              <h4 class="text-xs md:text-sm font-medium">Fresh Carrots</h4>
+              <h4 class="text-xs md:text-sm text-secondary-500 font-semibold">$12.00</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="flex flex-col sm:grid sm:grid-cols-2 1220:flex 1220:flex-row items-center justify-between gap-4 1220:gap-6 px-4 1220:px-8 py-6 1220:py-8 bg-white/80 backdrop:blur-lg rounded-lg 1220:rounded-xl w-full mt-6 1220:mt-0"
+      >
+        <div class="flex flex-col gap-3 1220:gap-6 sm:col-span-1 w-full sm:w-auto">
+          <img
+            src="assets/Homepage/Hero/Dairy.svg"
+            alt=""
+            width="64"
+            height="64"
+            class="md:w-24 md:h-24 1220:w-24 1220:h-24"
+          />
+          <div class="flex flex-col gap-1 1220:gap-2">
+            <h4 class="text-sm md:text-base 1220:text-xl font-medium">Dairy Products</h4>
+            <p class="text-xs md:text-sm 1220:text-base">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
+          </div>
+        </div>
+        <div class="flex flex-col gap-3 1220:gap-6 sm:col-span-1 w-full sm:w-auto">
+          <img
+            src="assets/Homepage/Hero/Fruits and vegetables.svg"
+            alt=""
+            width="64"
+            height="64"
+            class="md:w-24 md:h-24 1220:w-24 1220:h-24"
+          />
+          <div class="flex flex-col gap-1 1220:gap-2">
+            <h4 class="text-sm md:text-base 1220:text-xl font-medium">Vegetables & Fruits</h4>
+            <p class="text-xs md:text-sm 1220:text-base">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
+          </div>
+        </div>
+        <div class="flex flex-col gap-3 1220:gap-6 sm:col-span-1 w-full sm:w-auto">
+          <img
+            src="assets/Homepage/Hero/Condiments.svg"
+            alt=""
+            width="64"
+            height="64"
+            class="md:w-24 md:h-24 1220:w-24 1220:h-24"
+          />
+          <div class="flex flex-col gap-1 1220:gap-2">
+            <h4 class="text-sm md:text-base 1220:text-xl font-medium">Spices & Seasonings</h4>
+            <p class="text-xs md:text-sm 1220:text-base">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
+          </div>
+        </div>
+        <div class="flex flex-col gap-3 1220:gap-6 sm:col-span-1 w-full sm:w-auto">
+          <img
+            src="assets/Homepage/Hero/Baby food.svg"
+            alt=""
+            width="64"
+            height="64"
+            class="md:w-24 md:h-24 1220:w-24 1220:h-24"
+          />
+          <div class="flex flex-col gap-1 1220:gap-2">
+            <h4 class="text-sm md:text-base 1220:text-xl font-medium">Honey</h4>
+            <p class="text-xs md:text-sm 1220:text-base">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
+          </div>
+        </div>
+        <div class="flex flex-col gap-3 1220:gap-6 sm:col-span-1 w-full sm:w-auto">
+          <img
+            src="assets/Homepage/Hero/Grain and pasta.svg"
+            alt=""
+            width="64"
+            height="64"
+            class="md:w-24 md:h-24 1220:w-24 1220:h-24"
+          />
+          <div class="flex flex-col gap-1 1220:gap-2">
+            <h4 class="text-sm md:text-base 1220:text-xl font-medium">Flour</h4>
+            <p class="text-xs md:text-sm 1220:text-base">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
+          </div>
+        </div>
+      </div>
+    </hero>
+            </p>
+          </div>
+        </div>
+      </div>
+    </hero>
+
+    <section class="px-6 py-8 lg:px-12 lg:py-6 flex flex-col w-full gap-8">
+      <div class="flex items-center justify-center gap-2 flex-col">
+        <h3 class="text-2xl md:text-3xl lg:text-4xl font-semibold text-center">
+          Best Selling Products
+        </h3>
+        <img
+          src="assets/Homepage/leaf.png"
+          alt=""
+          width="75"
+          height="75"
+          class="hover:rotate-12 transition-transform duration-300"
+        />
+      </div>
+      <div
+        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 w-full gap-6 md:gap-8"
+      >
+        <!-- Product Card 1 -->
+        <div class="flex flex-col gap-3 group">
+          <div
+            class="bg-[#E7E6E6] w-full px-6 py-4 h-[280px] md:h-[325px] flex items-center justify-center rounded-lg overflow-hidden relative group-hover:shadow-xl transition-all duration-300"
+          >
+            <img
+              src="assets/Homepage/plant.png"
+              alt="Green Leafy plant"
+              class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500"
+            />
+            <button
+              class="absolute bottom-4 right-4 bg-[#39A116] text-white p-3 rounded-full opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 hover:bg-[#2d8011]"
+            >
+              <img
+                src="assets/Resuable/cart.svg"
+                alt=""
+                width="20"
+                height="20"
+              />
+            </button>
+          </div>
+          <div class="flex flex-col items-center gap-2">
+            <div class="flex flex-col w-full items-center">
+              <p
+                class="text-base md:text-lg font-serif font-medium text-gray-600"
+              >
+                Groceries
+              </p>
+              <h4
+                class="text-lg md:text-xl lg:text-2xl font-medium group-hover:text-[#39A116] transition-colors duration-300"
+              >
+                Green Leafy plant
+              </h4>
+            </div>
+            <div class="flex items-center gap-1">
+              <img
+                src="assets/Resuable/star.svg"
+                alt="star"
+                width="20"
+                height="20"
+                class="md:w-6 md:h-6"
+              />
+              <img
+                src="assets/Resuable/star.svg"
+                alt="star"
+                width="20"
+                height="20"
+                class="md:w-6 md:h-6"
+              />
+              <img
+                src="assets/Resuable/star.svg"
+                alt="star"
+                width="20"
+                height="20"
+                class="md:w-6 md:h-6"
+              />
+              <img
+                src="assets/Resuable/star.svg"
+                alt="star"
+                width="20"
+                height="20"
+                class="md:w-6 md:h-6"
+              />
+              <img
+                src="assets/Resuable/star.svg"
+                alt="star"
+                width="20"
+                height="20"
+                class="md:w-6 md:h-6"
+              />
+            </div>
+            <h5 class="text-[#1A6109] font-semibold text-lg md:text-xl">
+              $20.23
+            </h5>
+          </div>
+        </div>
+
+        <!-- Product Card 2 -->
+        <div class="flex flex-col gap-3 group">
+          <div
+            class="bg-[#E7E6E6] w-full px-6 py-4 h-[280px] md:h-[325px] flex items-center justify-center rounded-lg overflow-hidden relative group-hover:shadow-xl transition-all duration-300"
+          >
+            <img
+              src="assets/Homepage/plant.png"
+              alt="Green Leafy plant"
+              class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500"
+            />
+            <button
+              class="absolute bottom-4 right-4 bg-[#39A116] text-white p-3 rounded-full opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 hover:bg-[#2d8011]"
+            >
+              <img
+                src="assets/Resuable/cart.svg"
+                alt=""
+                width="20"
+                height="20"
+              />
+            </button>
+          </div>
+          <div class="flex flex-col items-center gap-2">
+            <div class="flex flex-col w-full items-center">
+              <p
+                class="text-base md:text-lg font-serif font-medium text-gray-600"
+              >
+                Groceries
+              </p>
+              <h4
+                class="text-lg md:text-xl lg:text-2xl font-medium group-hover:text-[#39A116] transition-colors duration-300"
+              >
+                Green Leafy plant
+              </h4>
+            </div>
+            <div class="flex items-center gap-1">
+              <img
+                src="assets/Resuable/star.svg"
+                alt="star"
+                width="20"
+                height="20"
+                class="md:w-6 md:h-6"
+              />
+              <img
+                src="assets/Resuable/star.svg"
+                alt="star"
+                width="20"
+                height="20"
+                class="md:w-6 md:h-6"
+              />
+              <img
+                src="assets/Resuable/star.svg"
+                alt="star"
+                width="20"
+                height="20"
+                class="md:w-6 md:h-6"
+              />
+              <img
+                src="assets/Resuable/star.svg"
+                alt="star"
+                width="20"
+                height="20"
+                class="md:w-6 md:h-6"
+              />
+              <img
+                src="assets/Resuable/star.svg"
+                alt="star"
+                width="20"
+                height="20"
+                class="md:w-6 md:h-6"
+              />
+            </div>
+            <h5 class="text-[#1A6109] font-semibold text-lg md:text-xl">
+              $20.23
+            </h5>
+          </div>
+        </div>
+
+        <!-- Product Card 3 -->
+        <div class="flex flex-col gap-3 group">
+          <div
+            class="bg-[#E7E6E6] w-full px-6 py-4 h-[280px] md:h-[325px] flex items-center justify-center rounded-lg overflow-hidden relative group-hover:shadow-xl transition-all duration-300"
+          >
+            <img
+              src="assets/Homepage/plant.png"
+              alt="Green Leafy plant"
+              class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500"
+            />
+            <button
+              class="absolute bottom-4 right-4 bg-[#39A116] text-white p-3 rounded-full opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 hover:bg-[#2d8011]"
+            >
+              <img
+                src="assets/Resuable/cart.svg"
+                alt=""
+                width="20"
+                height="20"
+              />
+            </button>
+          </div>
+          <div class="flex flex-col items-center gap-2">
+            <div class="flex flex-col w-full items-center">
+              <p
+                class="text-base md:text-lg font-serif font-medium text-gray-600"
+              >
+                Groceries
+              </p>
+              <h4
+                class="text-lg md:text-xl lg:text-2xl font-medium group-hover:text-[#39A116] transition-colors duration-300"
+              >
+                Green Leafy plant
+              </h4>
+            </div>
+            <div class="flex items-center gap-1">
+              <img
+                src="assets/Resuable/star.svg"
+                alt="star"
+                width="20"
+                height="20"
+                class="md:w-6 md:h-6"
+              />
+              <img
+                src="assets/Resuable/star.svg"
+                alt="star"
+                width="20"
+                height="20"
+                class="md:w-6 md:h-6"
+              />
+              <img
+                src="assets/Resuable/star.svg"
+                alt="star"
+                width="20"
+                height="20"
+                class="md:w-6 md:h-6"
+              />
+              <img
+                src="assets/Resuable/star.svg"
+                alt="star"
+                width="20"
+                height="20"
+                class="md:w-6 md:h-6"
+              />
+              <img
+                src="assets/Resuable/star.svg"
+                alt="star"
+                width="20"
+                height="20"
+                class="md:w-6 md:h-6"
+              />
+            </div>
+            <h5 class="text-[#1A6109] font-semibold text-lg md:text-xl">
+              $20.23
+            </h5>
+          </div>
+        </div>
+
+        <!-- Product Card 4 -->
+        <div class="flex flex-col gap-3 group">
+          <div
+            class="bg-[#E7E6E6] w-full px-6 py-4 h-[280px] md:h-[325px] flex items-center justify-center rounded-lg overflow-hidden relative group-hover:shadow-xl transition-all duration-300"
+          >
+            <img
+              src="assets/Homepage/plant.png"
+              alt="Green Leafy plant"
+              class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500"
+            />
+            <button
+              class="absolute bottom-4 right-4 bg-[#39A116] text-white p-3 rounded-full opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 hover:bg-[#2d8011]"
+            >
+              <img
+                src="assets/Resuable/cart.svg"
+                alt=""
+                width="20"
+                height="20"
+              />
+            </button>
+          </div>
+          <div class="flex flex-col items-center gap-2">
+            <div class="flex flex-col w-full items-center">
+              <p
+                class="text-base md:text-lg font-serif font-medium text-gray-600"
+              >
+                Groceries
+              </p>
+              <h4
+                class="text-lg md:text-xl lg:text-2xl font-medium group-hover:text-[#39A116] transition-colors duration-300"
+              >
+                Green Leafy plant
+              </h4>
+            </div>
+            <div class="flex items-center gap-1">
+              <img
+                src="assets/Resuable/star.svg"
+                alt="star"
+                width="20"
+                height="20"
+                class="md:w-6 md:h-6"
+              />
+              <img
+                src="assets/Resuable/star.svg"
+                alt="star"
+                width="20"
+                height="20"
+                class="md:w-6 md:h-6"
+              />
+              <img
+                src="assets/Resuable/star.svg"
+                alt="star"
+                width="20"
+                height="20"
+                class="md:w-6 md:h-6"
+              />
+              <img
+                src="assets/Resuable/star.svg"
+                alt="star"
+                width="20"
+                height="20"
+                class="md:w-6 md:h-6"
+              />
+              <img
+                src="assets/Resuable/star.svg"
+                alt="star"
+                width="20"
+                height="20"
+                class="md:w-6 md:h-6"
+              />
+            </div>
+            <h5 class="text-[#1A6109] font-semibold text-lg md:text-xl">
+              $20.23
+            </h5>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="h-[620px] bg-section-background flex items-end justify-start px-6 py-8 lg:px-12 lg:py-6"
+    >
+      <p class="max-w-[700px] w-full text-white text-xl font-medium">
+        Treat yourself to a creamy paradise with ScoopFest's premium,
+        handcrafted ice cream flavors. Each scoop is a heavenly blend of rich,
+        velvety goodness that will leave you craving more
+      </p>
+    </section>
+
+    <section
+      class="px-6 py-8 lg:px-12 lg:py-6 flex flex-col items-center gap-8"
+    >
+      <h3
+        class="text-2xl md:text-3xl lg:text-4xl text-light text-center leading-tight max-w-4xl"
+      >
+        160,000+ customers in over 120 countries grow their businesses with Us
+      </h3>
+      <div
+        class="flex flex-wrap justify-center items-center w-full gap-8 md:gap-10 lg:gap-12 max-w-6xl"
+      >
+        <div
+          class="w-[calc(50%-1rem)] sm:w-[calc(33.333%-1.5rem)] md:w-[calc(25%-1.875rem)] lg:w-[calc(20%-2.4rem)] flex justify-center"
+        >
+          <img
+            src="assets/Homepage/Logo.png"
+            alt="Partner logo"
+            class="w-full h-auto max-h-[55px] max-w-[140px] object-contain grayscale hover:grayscale-0 transition-all duration-300 hover:scale-110"
+          />
+        </div>
+        <div
+          class="w-[calc(50%-1rem)] sm:w-[calc(33.333%-1.5rem)] md:w-[calc(25%-1.875rem)] lg:w-[calc(20%-2.4rem)] flex justify-center"
+        >
+          <img
+            src="assets/Homepage/Logo.png"
+            alt="Partner logo"
+            class="w-full h-auto max-h-[55px] max-w-[140px] object-contain grayscale hover:grayscale-0 transition-all duration-300 hover:scale-110"
+          />
+        </div>
+        <div
+          class="w-[calc(50%-1rem)] sm:w-[calc(33.333%-1.5rem)] md:w-[calc(25%-1.875rem)] lg:w-[calc(20%-2.4rem)] flex justify-center"
+        >
+          <img
+            src="assets/Homepage/Logo.png"
+            alt="Partner logo"
+            class="w-full h-auto max-h-[55px] max-w-[140px] object-contain grayscale hover:grayscale-0 transition-all duration-300 hover:scale-110"
+          />
+        </div>
+        <div
+          class="w-[calc(50%-1rem)] sm:w-[calc(33.333%-1.5rem)] md:w-[calc(25%-1.875rem)] lg:w-[calc(20%-2.4rem)] flex justify-center"
+        >
+          <img
+            src="assets/Homepage/Logo.png"
+            alt="Partner logo"
+            class="w-full h-auto max-h-[55px] max-w-[140px] object-contain grayscale hover:grayscale-0 transition-all duration-300 hover:scale-110"
+          />
+        </div>
+        <div
+          class="w-[calc(50%-1rem)] sm:w-[calc(33.333%-1.5rem)] md:w-[calc(25%-1.875rem)] lg:w-[calc(20%-2.4rem)] flex justify-center"
+        >
+          <img
+            src="assets/Homepage/Logo.png"
+            alt="Partner logo"
+            class="w-full h-auto max-h-[55px] max-w-[140px] object-contain grayscale hover:grayscale-0 transition-all duration-300 hover:scale-110"
+          />
+        </div>
+        <div
+          class="w-[calc(50%-1rem)] sm:w-[calc(33.333%-1.5rem)] md:w-[calc(25%-1.875rem)] lg:w-[calc(20%-2.4rem)] flex justify-center"
+        >
+          <img
+            src="assets/Homepage/Logo.png"
+            alt="Partner logo"
+            class="w-full h-auto max-h-[55px] max-w-[140px] object-contain grayscale hover:grayscale-0 transition-all duration-300 hover:scale-110"
+          />
+        </div>
+        <div
+          class="w-[calc(50%-1rem)] sm:w-[calc(33.333%-1.5rem)] md:w-[calc(25%-1.875rem)] lg:w-[calc(20%-2.4rem)] flex justify-center"
+        >
+          <img
+            src="assets/Homepage/Logo.png"
+            alt="Partner logo"
+            class="w-full h-auto max-h-[55px] max-w-[140px] object-contain grayscale hover:grayscale-0 transition-all duration-300 hover:scale-110"
+          />
+        </div>
+        <div
+          class="w-[calc(50%-1rem)] sm:w-[calc(33.333%-1.5rem)] md:w-[calc(25%-1.875rem)] lg:w-[calc(20%-2.4rem)] flex justify-center"
+        >
+          <img
+            src="assets/Homepage/Logo.png"
+            alt="Partner logo"
+            class="w-full h-auto max-h-[55px] max-w-[140px] object-contain grayscale hover:grayscale-0 transition-all duration-300 hover:scale-110"
+          />
+        </div>
+        <div
+          class="w-[calc(50%-1rem)] sm:w-[calc(33.333%-1.5rem)] md:w-[calc(25%-1.875rem)] lg:w-[calc(20%-2.4rem)] flex justify-center"
+        >
+          <img
+            src="assets/Homepage/Logo.png"
+            alt="Partner logo"
+            class="w-full h-auto max-h-[55px] max-w-[140px] object-contain grayscale hover:grayscale-0 transition-all duration-300 hover:scale-110"
+          />
+        </div>
+        <div
+          class="w-[calc(50%-1rem)] sm:w-[calc(33.333%-1.5rem)] md:w-[calc(25%-1.875rem)] lg:w-[calc(20%-2.4rem)] flex justify-center"
+        >
+          <img
+            src="assets/Homepage/Logo.png"
+            alt="Partner logo"
+            class="w-full h-auto max-h-[55px] max-w-[140px] object-contain grayscale hover:grayscale-0 transition-all duration-300 hover:scale-110"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section class="px-6 py-8 lg:px-12 lg:py-6 flex flex-col w-full gap-8">
+      <div class="flex items-center justify-center gap-2 flex-col">
+        <h3 class="text-2xl md:text-3xl lg:text-4xl font-semibold text-center">
+          Trending Products
+        </h3>
+        <img
+          src="assets/Homepage/leaf.png"
+          alt=""
+          width="75"
+          height="75"
+          class="hover:rotate-12 transition-transform duration-300"
+        />
+      </div>
+      <div
+        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 w-full gap-6 md:gap-8"
+      >
+        <!-- Product Card 1 -->
+        <div class="flex flex-col gap-3 group">
+          <div
+            class="bg-[#E7E6E6] w-full px-6 py-4 h-[280px] md:h-[325px] flex items-center justify-center rounded-lg overflow-hidden relative group-hover:shadow-xl transition-all duration-300"
+          >
+            <img
+              src="assets/Homepage/plant.png"
+              alt="Green Leafy plant"
+              class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500"
+            />
+            <button
+              class="absolute bottom-4 right-4 bg-[#39A116] text-white p-3 rounded-full opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 hover:bg-[#2d8011]"
+            >
+              <img
+                src="assets/Resuable/cart.svg"
+                alt=""
+                width="20"
+                height="20"
+              />
+            </button>
+          </div>
+          <div class="flex flex-col items-center gap-2">
+            <div class="flex flex-col w-full items-center">
+              <p
+                class="text-base md:text-lg font-serif font-medium text-gray-600"
+              >
+                Groceries
+              </p>
+              <h4
+                class="text-lg md:text-xl lg:text-2xl font-medium group-hover:text-[#39A116] transition-colors duration-300"
+              >
+                Green Leafy plant
+              </h4>
+            </div>
+            <div class="flex items-center gap-1">
+              <img
+                src="assets/Resuable/star.svg"
+                alt="star"
+                width="20"
+                height="20"
+                class="md:w-6 md:h-6"
+              />
+              <img
+                src="assets/Resuable/star.svg"
+                alt="star"
+                width="20"
+                height="20"
+                class="md:w-6 md:h-6"
+              />
+              <img
+                src="assets/Resuable/star.svg"
+                alt="star"
+                width="20"
+                height="20"
+                class="md:w-6 md:h-6"
+              />
+              <img
+                src="assets/Resuable/star.svg"
+                alt="star"
+                width="20"
+                height="20"
+                class="md:w-6 md:h-6"
+              />
+              <img
+                src="assets/Resuable/star.svg"
+                alt="star"
+                width="20"
+                height="20"
+                class="md:w-6 md:h-6"
+              />
+            </div>
+            <h5 class="text-[#1A6109] font-semibold text-lg md:text-xl">
+              $20.23
+            </h5>
+          </div>
+        </div>
+
+        <!-- Product Card 2 -->
+        <div class="flex flex-col gap-3 group">
+          <div
+            class="bg-[#E7E6E6] w-full px-6 py-4 h-[280px] md:h-[325px] flex items-center justify-center rounded-lg overflow-hidden relative group-hover:shadow-xl transition-all duration-300"
+          >
+            <img
+              src="assets/Homepage/plant.png"
+              alt="Green Leafy plant"
+              class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500"
+            />
+            <button
+              class="absolute bottom-4 right-4 bg-[#39A116] text-white p-3 rounded-full opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 hover:bg-[#2d8011]"
+            >
+              <img
+                src="assets/Resuable/cart.svg"
+                alt=""
+                width="20"
+                height="20"
+              />
+            </button>
+          </div>
+          <div class="flex flex-col items-center gap-2">
+            <div class="flex flex-col w-full items-center">
+              <p
+                class="text-base md:text-lg font-serif font-medium text-gray-600"
+              >
+                Groceries
+              </p>
+              <h4
+                class="text-lg md:text-xl lg:text-2xl font-medium group-hover:text-[#39A116] transition-colors duration-300"
+              >
+                Green Leafy plant
+              </h4>
+            </div>
+            <div class="flex items-center gap-1">
+              <img
+                src="assets/Resuable/star.svg"
+                alt="star"
+                width="20"
+                height="20"
+                class="md:w-6 md:h-6"
+              />
+              <img
+                src="assets/Resuable/star.svg"
+                alt="star"
+                width="20"
+                height="20"
+                class="md:w-6 md:h-6"
+              />
+              <img
+                src="assets/Resuable/star.svg"
+                alt="star"
+                width="20"
+                height="20"
+                class="md:w-6 md:h-6"
+              />
+              <img
+                src="assets/Resuable/star.svg"
+                alt="star"
+                width="20"
+                height="20"
+                class="md:w-6 md:h-6"
+              />
+              <img
+                src="assets/Resuable/star.svg"
+                alt="star"
+                width="20"
+                height="20"
+                class="md:w-6 md:h-6"
+              />
+            </div>
+            <h5 class="text-[#1A6109] font-semibold text-lg md:text-xl">
+              $20.23
+            </h5>
+          </div>
+        </div>
+
+        <!-- Product Card 3 -->
+        <div class="flex flex-col gap-3 group">
+          <div
+            class="bg-[#E7E6E6] w-full px-6 py-4 h-[280px] md:h-[325px] flex items-center justify-center rounded-lg overflow-hidden relative group-hover:shadow-xl transition-all duration-300"
+          >
+            <img
+              src="assets/Homepage/plant.png"
+              alt="Green Leafy plant"
+              class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500"
+            />
+            <button
+              class="absolute bottom-4 right-4 bg-[#39A116] text-white p-3 rounded-full opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 hover:bg-[#2d8011]"
+            >
+              <img
+                src="assets/Resuable/cart.svg"
+                alt=""
+                width="20"
+                height="20"
+              />
+            </button>
+          </div>
+          <div class="flex flex-col items-center gap-2">
+            <div class="flex flex-col w-full items-center">
+              <p
+                class="text-base md:text-lg font-serif font-medium text-gray-600"
+              >
+                Groceries
+              </p>
+              <h4
+                class="text-lg md:text-xl lg:text-2xl font-medium group-hover:text-[#39A116] transition-colors duration-300"
+              >
+                Green Leafy plant
+              </h4>
+            </div>
+            <div class="flex items-center gap-1">
+              <img
+                src="assets/Resuable/star.svg"
+                alt="star"
+                width="20"
+                height="20"
+                class="md:w-6 md:h-6"
+              />
+              <img
+                src="assets/Resuable/star.svg"
+                alt="star"
+                width="20"
+                height="20"
+                class="md:w-6 md:h-6"
+              />
+              <img
+                src="assets/Resuable/star.svg"
+                alt="star"
+                width="20"
+                height="20"
+                class="md:w-6 md:h-6"
+              />
+              <img
+                src="assets/Resuable/star.svg"
+                alt="star"
+                width="20"
+                height="20"
+                class="md:w-6 md:h-6"
+              />
+              <img
+                src="assets/Resuable/star.svg"
+                alt="star"
+                width="20"
+                height="20"
+                class="md:w-6 md:h-6"
+              />
+            </div>
+            <h5 class="text-[#1A6109] font-semibold text-lg md:text-xl">
+              $20.23
+            </h5>
+          </div>
+        </div>
+
+        <!-- Product Card 4 -->
+        <div class="flex flex-col gap-3 group">
+          <div
+            class="bg-[#E7E6E6] w-full px-6 py-4 h-[280px] md:h-[325px] flex items-center justify-center rounded-lg overflow-hidden relative group-hover:shadow-xl transition-all duration-300"
+          >
+            <img
+              src="assets/Homepage/plant.png"
+              alt="Green Leafy plant"
+              class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500"
+            />
+            <button
+              class="absolute bottom-4 right-4 bg-[#39A116] text-white p-3 rounded-full opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 hover:bg-[#2d8011]"
+            >
+              <img
+                src="assets/Resuable/cart.svg"
+                alt=""
+                width="20"
+                height="20"
+              />
+            </button>
+          </div>
+          <div class="flex flex-col items-center gap-2">
+            <div class="flex flex-col w-full items-center">
+              <p
+                class="text-base md:text-lg font-serif font-medium text-gray-600"
+              >
+                Groceries
+              </p>
+              <h4
+                class="text-lg md:text-xl lg:text-2xl font-medium group-hover:text-[#39A116] transition-colors duration-300"
+              >
+                Green Leafy plant
+              </h4>
+            </div>
+            <div class="flex items-center gap-1">
+              <img
+                src="assets/Resuable/star.svg"
+                alt="star"
+                width="20"
+                height="20"
+                class="md:w-6 md:h-6"
+              />
+              <img
+                src="assets/Resuable/star.svg"
+                alt="star"
+                width="20"
+                height="20"
+                class="md:w-6 md:h-6"
+              />
+              <img
+                src="assets/Resuable/star.svg"
+                alt="star"
+                width="20"
+                height="20"
+                class="md:w-6 md:h-6"
+              />
+              <img
+                src="assets/Resuable/star.svg"
+                alt="star"
+                width="20"
+                height="20"
+                class="md:w-6 md:h-6"
+              />
+              <img
+                src="assets/Resuable/star.svg"
+                alt="star"
+                width="20"
+                height="20"
+                class="md:w-6 md:h-6"
+              />
+            </div>
+            <h5 class="text-[#1A6109] font-semibold text-lg md:text-xl">
+              $20.23
+            </h5>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="px-6 py-8 lg:px-12 lg:py-6 flex flex-col lg:flex-row items-center justify-between gap-8"
+    >
+      <div class="flex flex-col gap-6 max-w-[500px] w-full lg:w-[50%]">
+        <h4 class="text-3xl md:text-4xl lg:text-left text-center">
+          Best <span class="font-serif">Sellers</span>
+        </h4>
+        <p class="text-base md:text-lg lg:text-left text-center">
+          Treat yourself to a creamy paradise with ScoopFest's premium,
+          handcrafted ice cream flavors. Each scoop is a heavenly blend of rich,
+          velvety goodness that will leave you craving more.
+        </p>
+
+        <!-- use an anchor styled as a button for better semantics (avoid nesting interactive elements) -->
+        <a
+          href=""
+          class="inline-flex items-center gap-2 md:gap-2.5 bg-[#1A6109] hover:bg-[#2d8011] py-2 md:py-3 px-5 md:px-6 lg:px-8 rounded-lg text-white text-sm md:text-base lg:text-lg font-semibold w-fit lg:mx-0 mx-auto hover:shadow-lg hover:scale-105 transition-all duration-300"
+        >
+          Get Your Scoop of Bliss Now
+          <img
+            src="assets/Homepage/arrow-upright.svg"
+            alt="arrow"
+            width="16"
+            height="16"
+            class="md:w-5 md:h-5"
+          />
+        </a>
+      </div>
+
+      <img
+        src="assets/Homepage/honey-dripping-from-dipper.jpg"
+        alt="Honey dripping from dipper"
+        class="w-full lg:w-[500px] max-w-full rounded-sm object-cover"
+      />
+    </section>
+
+    <section
+      class="px-6 py-8 lg:px-12 lg:py-6 flex flex-col w-full gap-8 lg:gap-12 overflow-hidden"
+    >
+      <div class="flex items-center justify-center gap-2 flex-col">
+        <h3
+          class="text-2xl md:text-3xl lg:text-4xl font-semibold animate-fade-in"
+        >
+          Customer Reviews
+        </h3>
+      </div>
+
+      <div
+        class="flex flex-col lg:flex-row items-center lg:items-end justify-center lg:justify-between gap-8 lg:gap-6"
+      >
+        <!-- Review Card 1 -->
+        <div
+          class="flex py-8 md:py-12 gap-4 md:gap-6 flex-col bg-white w-full max-w-[350px] items-center px-4 md:px-3 shadow-lg rounded-xl hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 animate-slide-in-left"
+        >
+          <div class="flex items-center gap-1">
+            <img
+              src="assets/Homepage/star-yellow.svg"
+              alt="star"
+              width="20"
+              height="20"
+              class="md:w-6 md:h-6 animate-bounce-subtle"
+              style="animation-delay: 0s"
+            />
+            <img
+              src="assets/Homepage/star-yellow.svg"
+              alt="star"
+              width="20"
+              height="20"
+              class="md:w-6 md:h-6 animate-bounce-subtle"
+              style="animation-delay: 0.1s"
+            />
+            <img
+              src="assets/Homepage/star-yellow.svg"
+              alt="star"
+              width="20"
+              height="20"
+              class="md:w-6 md:h-6 animate-bounce-subtle"
+              style="animation-delay: 0.2s"
+            />
+            <img
+              src="assets/Homepage/star-yellow.svg"
+              alt="star"
+              width="20"
+              height="20"
+              class="md:w-6 md:h-6 animate-bounce-subtle"
+              style="animation-delay: 0.3s"
+            />
+            <img
+              src="assets/Homepage/star-yellow.svg"
+              alt="star"
+              width="20"
+              height="20"
+              class="md:w-6 md:h-6 animate-bounce-subtle"
+              style="animation-delay: 0.4s"
+            />
+          </div>
+
+          <p
+            class="text-base md:text-lg lg:text-xl text-gray-600 text-center leading-relaxed"
+          >
+            Click edit button to change this text. Lorem ipsum dolor sit amet,
+            consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper
+            mattis, pulvinar dapibus leo.
+          </p>
+
+          <div class="flex items-center gap-3 group">
+            <img
+              src="assets/Homepage/profile.jpg"
+              alt="Prayush Adhikari"
+              class="rounded-full h-[50px] w-[50px] md:h-[55px] md:w-[55px] object-cover border-2 border-transparent group-hover:border-[#39A116] transition-all duration-300"
+            />
+            <p class="text-lg md:text-xl text-gray-800 font-medium">
+              Prayush Adhikari
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="w-full max-w-[400px] lg:h-[550px] px-8 md:px-12 lg:px-20 shadow-xl rounded-xl flex items-center flex-col justify-center gap-6 md:gap-8 py-12 md:py-16 lg:py-20 hover:shadow-2xl hover:scale-105 transition-all duration-500 animate-scale-in relative overflow-hidden"
+          style="
+            background-image: url('assets/Homepage/pexels-quang-nguyen-vinh-222549-2153824.jpg');
+            background-size: cover;
+            background-position: center;
+          "
+        >
+          <!-- Dark overlay for better text readability -->
+          <div class="absolute inset-0 bg-black/40 rounded-xl"></div>
+
+          <!-- Animated background circles -->
+          <div
+            class="absolute top-0 right-0 w-40 h-40 bg-white/10 rounded-full -translate-y-1/2 translate-x-1/2 animate-pulse-slow"
+          ></div>
+          <div
+            class="absolute bottom-0 left-0 w-32 h-32 bg-white/10 rounded-full translate-y-1/2 -translate-x-1/2 animate-pulse-slow"
+            style="animation-delay: 1s"
+          ></div>
+
+          <div class="flex flex-col gap-6 md:gap-8 relative z-10">
+            <h3
+              class="text-2xl md:text-3xl lg:text-4xl text-center text-white font-bold leading-tight"
+            >
+              Deal Of The Day 15% Off On All Vegetables!
+            </h3>
+            <p class="text-white/90 text-center text-base md:text-lg">
+              I am text block. Click edit button to change this tex em ips.
+            </p>
+          </div>
+          <button
+            class="px-6 md:px-8 py-3 md:py-4 flex items-center gap-2.5 bg-[#39A116] hover:bg-[#2d8011] rounded-lg shadow-lg hover:shadow-xl hover:scale-110 transition-all duration-300 group relative z-10"
+          >
+            <a href="" class="text-base md:text-lg font-semibold text-white">
+              Shop Now
+            </a>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5 text-white group-hover:translate-x-1 transition-all duration-300"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </button>
+        </div>
+
+        <!-- Review Card 2 -->
+        <div
+          class="flex py-8 md:py-12 gap-4 md:gap-6 flex-col bg-white w-full max-w-[350px] items-center px-4 md:px-3 shadow-lg rounded-xl hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 animate-slide-in-right"
+        >
+          <div class="flex items-center gap-1">
+            <img
+              src="assets/Homepage/star-yellow.svg"
+              alt="star"
+              width="20"
+              height="20"
+              class="md:w-6 md:h-6 animate-bounce-subtle"
+              style="animation-delay: 0s"
+            />
+            <img
+              src="assets/Homepage/star-yellow.svg"
+              alt="star"
+              width="20"
+              height="20"
+              class="md:w-6 md:h-6 animate-bounce-subtle"
+              style="animation-delay: 0.1s"
+            />
+            <img
+              src="assets/Homepage/star-yellow.svg"
+              alt="star"
+              width="20"
+              height="20"
+              class="md:w-6 md:h-6 animate-bounce-subtle"
+              style="animation-delay: 0.2s"
+            />
+            <img
+              src="assets/Homepage/star-yellow.svg"
+              alt="star"
+              width="20"
+              height="20"
+              class="md:w-6 md:h-6 animate-bounce-subtle"
+              style="animation-delay: 0.3s"
+            />
+            <img
+              src="assets/Homepage/star-yellow.svg"
+              alt="star"
+              width="20"
+              height="20"
+              class="md:w-6 md:h-6 animate-bounce-subtle"
+              style="animation-delay: 0.4s"
+            />
+          </div>
+
+          <p
+            class="text-base md:text-lg lg:text-xl text-gray-600 text-center leading-relaxed"
+          >
+            Click edit button to change this text. Lorem ipsum dolor sit amet,
+            consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper
+            mattis, pulvinar dapibus leo.
+          </p>
+
+          <div class="flex items-center gap-3 group">
+            <img
+              src="assets/Homepage/profile.jpg"
+              alt="Prayush Adhikari"
+              class="rounded-full h-[50px] w-[50px] md:h-[55px] md:w-[55px] object-cover border-2 border-transparent group-hover:border-[#39A116] transition-all duration-300"
+            />
+            <p class="text-lg md:text-xl text-gray-800 font-medium">
+              Prayush Adhikari
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="flex flex-col px-6 py-8 lg:px-12 lg:py-6 gap-8 lg:gap-12">
+      <div
+        class="w-full flex justify-center relative overflow-hidden py-8 lg:py-0"
+      >
+        <!-- Left background image - hidden on mobile and small tablets -->
+        <img
+          src="assets/Homepage/pexels-quang-nguyen-vinh-222549-2153824.jpg"
+          alt=""
+          class="hidden lg:block -z-10 h-[300px] w-[450px] lg:h-[400px] lg:w-[550px] xl:h-[482px] xl:w-[700px] object-cover rounded-3xl absolute left-[35%] xl:left-[40%] top-1/2"
+          style="
+            transform: translateY(-50%) perspective(1000px) rotateY(-15deg);
+            transform-origin: right center;
+          "
+        />
+
+        <!-- Center main image -->
+        <img
+          src="assets/Homepage/pexels-pixabay-533982.jpg"
+          class="h-[300px] w-full max-w-[500px] sm:h-[350px] sm:max-w-[550px] md:h-[400px] md:max-w-[600px] lg:h-[400px] lg:w-[550px] xl:h-[482px] xl:w-[700px] object-cover rounded-2xl lg:rounded-3xl shadow-2xl"
+          alt="Sustainable kitchen products"
+        />
+
+        <!-- Right background image - hidden on mobile and small tablets -->
+        <img
+          src="assets/Homepage/pexels-quang-nguyen-vinh-222549-2153824.jpg"
+          alt=""
+          class="hidden lg:block -z-10 h-[300px] w-[450px] lg:h-[400px] lg:w-[550px] xl:h-[482px] xl:w-[700px] object-cover rounded-3xl absolute right-[35%] xl:right-[40%] top-1/2"
+          style="
+            transform: translateY(-50%) perspective(1000px) rotateY(15deg);
+            transform-origin: left center;
+          "
+        />
+      </div>
+
+      <div
+        class="text-gray-600 text-center text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl leading-relaxed px-4 max-w-5xl mx-auto"
+      >
+        Discover our commitment to
+        <img
+          src="assets/Homepage/pexels-pixabay-533982.jpg"
+          class="h-[18px] w-[90px] sm:h-[20px] sm:w-[100px] md:h-[22px] md:w-[110px] lg:h-[24px] lg:w-[120px] object-cover rounded-2xl lg:rounded-3xl inline align-middle"
+          alt=""
+        />
+        <span
+          class="font-semibold text-black hover:text-[#39A116] transition-colors duration-300"
+          >sustainable</span
+        >
+        materials, low-impact production, and
+        <span
+          class="text-black font-semibold hover:text-[#39A116] transition-colors duration-300"
+          >ethical sourcing</span
+        >
+        partnerships - all crafted to support a healthier planet and a
+        <img
+          src="assets/Homepage/pexels-quang-nguyen-vinh-222549-2153824.jpg"
+          class="h-[18px] w-[90px] sm:h-[20px] sm:w-[100px] md:h-[22px] md:w-[110px] lg:h-[24px] lg:w-[120px] object-cover rounded-2xl lg:rounded-3xl inline align-middle"
+          alt=""
+        />
+        <span
+          class="text-black font-semibold hover:text-[#39A116] transition-colors duration-300"
+          >greener kitchen</span
+        >
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="px-6 py-8 lg:px-12 lg:py-6 bg-black">
+      <div
+        class="flex flex-col lg:flex-row w-full justify-between items-start lg:items-center border-b border-white/20 pb-8 gap-6"
+      >
+        <div class="flex flex-col gap-3 sm:gap-6 max-w-full lg:max-w-[500px]">
+          <h3 class="text-xl sm:text-2xl lg:text-3xl font-bold text-white">
+            Subscribe To Our News letter
+          </h3>
+          <p class="text-white text-xs sm:text-sm lg:text-base leading-relaxed">
+            Sign up today Writing copy is time-consuming and difficult.
+            Headlime's artificial intelligence can take your thoughts.
+          </p>
+        </div>
+        <div
+          class="flex flex-col w-full sm:flex-row lg:w-[450px] rounded-lg sm:rounded-full overflow-hidden bg-white py-3 px-4 sm:py-2 sm:px-2 gap-3 sm:gap-0"
+        >
+          <input
+            type="text"
+            placeholder="Enter email address"
+            class="flex-1 rounded-md sm:rounded-l-full px-3 sm:px-4 focus:outline-0 border-0 text-xs sm:text-sm lg:text-base py-2 sm:py-0"
+          />
+          <button
+            class="bg-[#39A116] py-2 sm:py-3 px-4 sm:px-4 lg:px-6 text-white text-xs sm:text-sm lg:text-base font-bold rounded-md sm:rounded-full hover:bg-[#2d8011] transition-colors duration-300 whitespace-nowrap"
+          >
+            Get Listed
+          </button>
+        </div>
+      </div>
+
+      <div
+        class="grid grid-cols-2 lg:grid-cols-4 w-full py-8 text-white gap-8 lg:gap-4"
+      >
+        <div class="col-span-2 lg:col-span-1">
+          <img
+            src="assets/Resuable/logo.svg"
+            alt=""
+            width="64"
+            height="64"
+            class="hover:opacity-80 transition-opacity duration-300"
+          />
+        </div>
+        <div class="col-span-1">
+          <h4 class="text-xl lg:text-2xl font-semibold mb-4">INFO</h4>
+          <ul class="flex flex-col gap-2 text-base lg:text-lg text-gray-400">
+            <li>
+              <a
+                href=""
+                class="hover:text-white hover:translate-x-1 inline-block transition-all duration-300"
+                >About Us</a
+              >
+            </li>
+            <li>
+              <a
+                href=""
+                class="hover:text-white hover:translate-x-1 inline-block transition-all duration-300"
+                >Blog</a
+              >
+            </li>
+            <li>
+              <a
+                href=""
+                class="hover:text-white hover:translate-x-1 inline-block transition-all duration-300"
+                >Contact Us</a
+              >
+            </li>
+            <li>
+              <a
+                href=""
+                class="hover:text-white hover:translate-x-1 inline-block transition-all duration-300"
+                >FAQs</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="col-span-1">
+          <h4 class="text-xl lg:text-2xl font-semibold mb-4">About us</h4>
+          <ul class="flex flex-col gap-2 text-base lg:text-lg text-gray-400">
+            <li>
+              <a
+                href=""
+                class="hover:text-white hover:translate-x-1 inline-block transition-all duration-300"
+                >Gallery</a
+              >
+            </li>
+            <li>
+              <a
+                href=""
+                class="hover:text-white hover:translate-x-1 inline-block transition-all duration-300"
+                >Technologies</a
+              >
+            </li>
+            <li>
+              <a
+                href=""
+                class="hover:text-white hover:translate-x-1 inline-block transition-all duration-300"
+                >Contacts</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="col-span-2 lg:col-span-1">
+          <h4 class="text-xl lg:text-2xl font-semibold mb-4">Contact us</h4>
+          <ul class="flex flex-col gap-2 text-base lg:text-lg text-gray-400">
+            <li>
+              <a
+                href="tel:+19999999999"
+                class="hover:text-white hover:translate-x-1 inline-block transition-all duration-300"
+                >+1 (999) 999-99-99</a
+              >
+            </li>
+            <li>
+              <a
+                href="mailto:hello@logoipsum.com"
+                class="hover:text-white hover:translate-x-1 inline-block transition-all duration-300"
+                >hello@logoipsum.com</a
+              >
+            </li>
+            <li>
+              <a
+                href=""
+                class="hover:text-white hover:translate-x-1 inline-block transition-all duration-300"
+                >London</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div
+        class="flex flex-col md:flex-row items-center w-full justify-between gap-6 pt-6 border-t border-white/20"
+      >
+        <div class="flex items-center gap-3">
+          <a
+            href=""
+            class="p-2.5 flex items-center justify-center border-2 border-gray-600 rounded-full hover:border-white hover:bg-white hover:scale-110 transition-all duration-300 group"
+          >
+            <img
+              src="assets/Homepage/fb.svg"
+              alt="Facebook"
+              width="16"
+              height="16"
+              class="group-hover:brightness-0"
+            />
+          </a>
+          <a
+            href=""
+            class="p-2.5 flex items-center justify-center border-2 border-gray-600 rounded-full hover:border-white hover:bg-white hover:scale-110 transition-all duration-300 group"
+          >
+            <img
+              src="assets/Homepage/fb.svg"
+              alt="Twitter"
+              width="16"
+              height="16"
+              class="group-hover:brightness-0"
+            />
+          </a>
+
+          <a
+            href=""
+            class="p-2.5 flex items-center justify-center border-2 border-gray-600 rounded-full hover:border-white hover:bg-white hover:scale-110 transition-all duration-300 group"
+          >
+            <img
+              src="assets/Homepage/fb.svg"
+              alt="Instagram"
+              width="16"
+              height="16"
+              class="group-hover:brightness-0"
+            />
+          </a>
+
+          <a
+            href=""
+            class="p-2.5 flex items-center justify-center border-2 border-gray-600 rounded-full hover:border-white hover:bg-white hover:scale-110 transition-all duration-300 group"
+          >
+            <img
+              src="assets/Homepage/fb.svg"
+              alt="LinkedIn"
+              width="16"
+              height="16"
+              class="group-hover:brightness-0"
+            />
+          </a>
+          <a
+            href=""
+            class="p-2.5 flex items-center justify-center border-2 border-gray-600 rounded-full hover:border-white hover:bg-white hover:scale-110 transition-all duration-300 group"
+          >
+            <img
+              src="assets/Homepage/fb.svg"
+              alt="YouTube"
+              width="16"
+              height="16"
+              class="group-hover:brightness-0"
+            />
+          </a>
+        </div>
+
+        <p class="text-gray-400 text-sm lg:text-base">© 2023 — Copyright</p>
+      </div>
+    </footer>
+
+    <script>
+      // Hamburger Menu Toggle
+      const hamburger = document.getElementById("hamburger");
+      const mobileMenu = document.getElementById("mobileMenu");
+
+      hamburger.addEventListener("click", function () {
+        hamburger.classList.toggle("active");
+        mobileMenu.classList.toggle("active");
+      });
+
+      // Close menu when a link is clicked
+      const mobileMenuLinks = mobileMenu.querySelectorAll("a");
+      mobileMenuLinks.forEach((link) => {
+        link.addEventListener("click", function () {
+          hamburger.classList.remove("active");
+          mobileMenu.classList.remove("active");
+        });
+      });
+
+      // Close menu when clicking outside
+      document.addEventListener("click", function (event) {
+        if (
+          !hamburger.contains(event.target) &&
+          !mobileMenu.contains(event.target)
+        ) {
+          hamburger.classList.remove("active");
+          mobileMenu.classList.remove("active");
+        }
+      });
+    </script>
+  </body>
+</html>
