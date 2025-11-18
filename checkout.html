@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout - Organic Shop Nepal</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="tailwind.config.js"></script>
+  </head>
+  <body class="flex flex-col gap-8">
+    <!-- NavBar -->
+    <nav class="px-6 py-8 flex items-center justify-between lg:px-12 lg:py-4">
+      <div class="flex items-center gap-2 lg:gap-6">
+        <a href="index.html">
+          <img
+            src="assets/Resuable/logo.svg"
+            alt="Organic Shop Nepal Logo"
+            width="43"
+            height="43"
+          />
+        </a>
+        <ul
+          id="navMenu"
+          class="hidden lg:flex items-center gap-6 text-xl font-semibold leading-5 tracking-wide"
+        >
+          <li>
+            <a
+              href="index.html"
+              class="hover:text-[#39A116] transition-colors duration-300"
+              >Shop</a
+            >
+          </li>
+          <li>
+            <a
+              href="product.html"
+              class="hover:text-[#39A116] transition-colors duration-300"
+              >Products</a
+            >
+          </li>
+          <li>
+            <a
+              href="index.html"
+              class="hover:text-[#39A116] transition-colors duration-300"
+              >Gallery</a
+            >
+          </li>
+          <li>
+            <a
+              href="index.html"
+              class="hover:text-[#39A116] transition-colors duration-300"
+              >About</a
+            >
+          </li>
+        </ul>
+      </div>
+
+      <div class="flex items-center gap-2 lg:gap-4">
+        <div
+          class="hidden lg:flex w-[254px] px-2.5 py-1.5 bg-[#E8E8E8] rounded-full gap-2.5"
+        >
+          <img
+            src="assets/Resuable/search.svg"
+            alt="Search Icon"
+            width="20"
+            height="20"
+          />
+          <input
+            type="text"
+            placeholder="Search Product..."
+            class="text-lg placeholder:text-muted outline-0 border-0 flex-1 w-full bg-transparent"
+          />
+        </div>
+
+        <a
+          href="cart.html"
+          class="rounded-full p-2.5 flex items-center justify-center bg-primary-800 hover:bg-[#2d8011] transition-colors duration-300"
+        >
+          <img
+            src="assets/Resuable/cart.svg"
+            alt="Cart Icon"
+            width="20"
+            height="20"
+          />
+        </a>
+
+        <button
+          class="rounded-full p-2.5 flex items-center justify-center bg-primary-800 hover:bg-[#2d8011] transition-colors duration-300"
+        >
+          <img
+            src="assets/Resuable/person.svg"
+            alt="Account Icon"
+            width="20"
+            height="20"
+          />
+        </button>
+
+        <button
+          id="hamburger"
+          class="lg:hidden flex flex-col gap-1.5 cursor-pointer"
+        >
+          <span class="w-6 h-0.5 bg-black block transition-all"></span>
+          <span class="w-6 h-0.5 bg-black block transition-all"></span>
+          <span class="w-6 h-0.5 bg-black block transition-all"></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu">
+      <ul class="flex flex-col gap-4 p-4">
+        <li>
+          <a href="index.html">Shop</a>
+        </li>
+        <li>
+          <a href="product.html">Products</a>
+        </li>
+        <li>
+          <a href="index.html">Gallery</a>
+        </li>
+        <li>
+          <a href="index.html">About</a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Breadcrumb -->
+    <section class="px-6 lg:px-12 py-4">
+      <p class="text-sm lg:text-base text-light">
+        <a
+          href="index.html"
+          class="hover:text-[#39A116] transition-colors duration-300"
+          >Home</a
+        >
+        /
+        <a
+          href="cart.html"
+          class="hover:text-[#39A116] transition-colors duration-300"
+          >Cart</a
+        >
+        /
+        <span class="text-[#39A116] font-medium">Checkout</span>
+      </p>
+    </section>
+
+    <!-- Checkout Section -->
+    <section class="px-6 lg:px-12 py-8 flex flex-col gap-8">
+      <div class="flex flex-col gap-4">
+        <h1 class="text-4xl md:text-5xl font-semibold text-dark">Checkout</h1>
+        <p class="text-lg text-light">Complete your purchase securely</p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <!-- Main Checkout Form -->
+        <div class="lg:col-span-2 flex flex-col gap-8">
+          <!-- Shipping Information -->
+          <div class="bg-white p-6 md:p-8 rounded-lg border border-gray-200">
+            <h2 class="text-2xl md:text-3xl font-semibold mb-6 text-dark">
+              Shipping Address
+            </h2>
+
+            <form class="flex flex-col gap-6">
+              <!-- Full Name -->
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="flex flex-col gap-2">
+                  <label class="font-semibold text-dark">First Name</label>
+                  <input
+                    type="text"
+                    placeholder="John"
+                    class="border border-gray-300 rounded-lg px-4 py-3 outline-0 focus:border-[#39A116] transition-colors duration-300"
+                  />
+                </div>
+                <div class="flex flex-col gap-2">
+                  <label class="font-semibold text-dark">Last Name</label>
+                  <input
+                    type="text"
+                    placeholder="Doe"
+                    class="border border-gray-300 rounded-lg px-4 py-3 outline-0 focus:border-[#39A116] transition-colors duration-300"
+                  />
+                </div>
+              </div>
+
+              <!-- Email -->
+              <div class="flex flex-col gap-2">
+                <label class="font-semibold text-dark">Email Address</label>
+                <input
+                  type="email"
+                  placeholder="john@example.com"
+                  class="border border-gray-300 rounded-lg px-4 py-3 outline-0 focus:border-[#39A116] transition-colors duration-300"
+                />
+              </div>
+
+              <!-- Phone -->
+              <div class="flex flex-col gap-2">
+                <label class="font-semibold text-dark">Phone Number</label>
+                <input
+                  type="tel"
+                  placeholder="+977 98XXXXXXXX"
+                  class="border border-gray-300 rounded-lg px-4 py-3 outline-0 focus:border-[#39A116] transition-colors duration-300"
+                />
+              </div>
+
+              <!-- Address -->
+              <div class="flex flex-col gap-2">
+                <label class="font-semibold text-dark">Street Address</label>
+                <input
+                  type="text"
+                  placeholder="123 Main Street"
+                  class="border border-gray-300 rounded-lg px-4 py-3 outline-0 focus:border-[#39A116] transition-colors duration-300"
+                />
+              </div>
+
+              <!-- City, State, Zip -->
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div class="flex flex-col gap-2">
+                  <label class="font-semibold text-dark">City</label>
+                  <input
+                    type="text"
+                    placeholder="Kathmandu"
+                    class="border border-gray-300 rounded-lg px-4 py-3 outline-0 focus:border-[#39A116] transition-colors duration-300"
+                  />
+                </div>
+                <div class="flex flex-col gap-2">
+                  <label class="font-semibold text-dark">District</label>
+                  <select
+                    class="border border-gray-300 rounded-lg px-4 py-3 outline-0 focus:border-[#39A116] transition-colors duration-300 bg-white"
+                  >
+                    <option>Select District</option>
+                    <option>Kathmandu</option>
+                    <option>Bhaktapur</option>
+                    <option>Lalitpur</option>
+                  </select>
+                </div>
+                <div class="flex flex-col gap-2">
+                  <label class="font-semibold text-dark">Postal Code</label>
+                  <input
+                    type="text"
+                    placeholder="44600"
+                    class="border border-gray-300 rounded-lg px-4 py-3 outline-0 focus:border-[#39A116] transition-colors duration-300"
+                  />
+                </div>
+              </div>
+
+              <!-- Country -->
+              <div class="flex flex-col gap-2">
+                <label class="font-semibold text-dark">Country</label>
+                <select
+                  class="border border-gray-300 rounded-lg px-4 py-3 outline-0 focus:border-[#39A116] transition-colors duration-300 bg-white"
+                >
+                  <option>Select Country</option>
+                  <option selected>Nepal</option>
+                  <option>India</option>
+                  <option>Pakistan</option>
+                </select>
+              </div>
+
+              <!-- Delivery Note -->
+              <div class="flex flex-col gap-2">
+                <label class="font-semibold text-dark"
+                  >Delivery Instructions (Optional)</label
+                >
+                <textarea
+                  placeholder="Leave at door, ring bell twice, etc."
+                  rows="3"
+                  class="border border-gray-300 rounded-lg px-4 py-3 outline-0 focus:border-[#39A116] transition-colors duration-300 resize-none"
+                ></textarea>
+              </div>
+            </form>
+          </div>
+
+          <!-- Shipping Method -->
+          <div class="bg-white p-6 md:p-8 rounded-lg border border-gray-200">
+            <h2 class="text-2xl md:text-3xl font-semibold mb-6 text-dark">
+              Shipping Method
+            </h2>
+
+            <div class="flex flex-col gap-4">
+              <label
+                class="flex items-center gap-4 p-4 border-2 border-[#39A116] rounded-lg cursor-pointer bg-[#F381600D]"
+              >
+                <input
+                  type="radio"
+                  name="shipping"
+                  value="standard"
+                  checked
+                  class="w-5 h-5 accent-[#39A116]"
+                />
+                <div class="flex-1">
+                  <p class="font-semibold text-dark">Standard Delivery</p>
+                  <p class="text-sm text-light">
+                    Delivery within 5-7 business days
+                  </p>
+                </div>
+                <p class="font-bold text-[#39A116]">Free</p>
+              </label>
+
+              <label
+                class="flex items-center gap-4 p-4 border-2 border-gray-300 rounded-lg cursor-pointer hover:border-[#39A116] transition-colors duration-300"
+              >
+                <input
+                  type="radio"
+                  name="shipping"
+                  value="express"
+                  class="w-5 h-5 accent-[#39A116]"
+                />
+                <div class="flex-1">
+                  <p class="font-semibold text-dark">Express Delivery</p>
+                  <p class="text-sm text-light">
+                    Delivery within 2-3 business days
+                  </p>
+                </div>
+                <p class="font-bold text-dark">$10.00</p>
+              </label>
+
+              <label
+                class="flex items-center gap-4 p-4 border-2 border-gray-300 rounded-lg cursor-pointer hover:border-[#39A116] transition-colors duration-300"
+              >
+                <input
+                  type="radio"
+                  name="shipping"
+                  value="overnight"
+                  class="w-5 h-5 accent-[#39A116]"
+                />
+                <div class="flex-1">
+                  <p class="font-semibold text-dark">Overnight Delivery</p>
+                  <p class="text-sm text-light">Delivery next business day</p>
+                </div>
+                <p class="font-bold text-dark">$25.00</p>
+              </label>
+            </div>
+          </div>
+
+          <!-- Payment Method -->
+          <div class="bg-white p-6 md:p-8 rounded-lg border border-gray-200">
+            <h2 class="text-2xl md:text-3xl font-semibold mb-6 text-dark">
+              Payment Method
+            </h2>
+
+            <div class="flex flex-col gap-4">
+              <label
+                class="flex items-center gap-4 p-4 border-2 border-[#39A116] rounded-lg cursor-pointer bg-[#F381600D]"
+              >
+                <input
+                  type="radio"
+                  name="payment"
+                  value="cash"
+                  checked
+                  class="w-5 h-5 accent-[#39A116]"
+                />
+                <div class="flex-1">
+                  <p class="font-semibold text-dark">Cash on Delivery</p>
+                  <p class="text-sm text-light">Pay when your order arrives</p>
+                </div>
+              </label>
+
+              <label
+                class="flex items-center gap-4 p-4 border-2 border-gray-300 rounded-lg cursor-pointer hover:border-[#39A116] transition-colors duration-300"
+              >
+                <input
+                  type="radio"
+                  name="payment"
+                  value="card"
+                  class="w-5 h-5 accent-[#39A116]"
+                />
+                <div class="flex-1">
+                  <p class="font-semibold text-dark">Credit/Debit Card</p>
+                  <p class="text-sm text-light">
+                    Visa, Mastercard, or other cards
+                  </p>
+                </div>
+              </label>
+
+              <label
+                class="flex items-center gap-4 p-4 border-2 border-gray-300 rounded-lg cursor-pointer hover:border-[#39A116] transition-colors duration-300"
+              >
+                <input
+                  type="radio"
+                  name="payment"
+                  value="esewa"
+                  class="w-5 h-5 accent-[#39A116]"
+                />
+                <div class="flex-1">
+                  <p class="font-semibold text-dark">eSewa</p>
+                  <p class="text-sm text-light">Pay securely using eSewa</p>
+                </div>
+              </label>
+
+              <label
+                class="flex items-center gap-4 p-4 border-2 border-gray-300 rounded-lg cursor-pointer hover:border-[#39A116] transition-colors duration-300"
+              >
+                <input
+                  type="radio"
+                  name="payment"
+                  value="khalti"
+                  class="w-5 h-5 accent-[#39A116]"
+                />
+                <div class="flex-1">
+                  <p class="font-semibold text-dark">Khalti</p>
+                  <p class="text-sm text-light">Pay securely using Khalti</p>
+                </div>
+              </label>
+            </div>
+          </div>
+
+          <!-- Promo Code -->
+          <div class="bg-white p-6 md:p-8 rounded-lg border border-gray-200">
+            <h2 class="text-2xl font-semibold mb-4 text-dark">Promo Code</h2>
+            <div class="flex flex-col sm:flex-row gap-3">
+              <input
+                type="text"
+                placeholder="Enter promo code"
+                class="flex-1 border border-gray-300 rounded-lg px-4 py-3 outline-0 focus:border-[#39A116] transition-colors duration-300"
+              />
+              <button
+                class="bg-[#39A116] hover:bg-[#2d8011] text-white font-bold px-6 py-3 rounded-lg transition-colors duration-300 whitespace-nowrap"
+              >
+                Apply
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Order Summary Sidebar -->
+        <div class="lg:col-span-1">
+          <div
+            class="bg-white p-6 rounded-lg border border-gray-200 sticky top-32 flex flex-col gap-6"
+          >
+            <h2 class="text-2xl font-semibold text-dark">Order Summary</h2>
+
+            <!-- Order Items -->
+            <div class="flex flex-col gap-4 border-b border-gray-200 pb-6">
+              <!-- Item 1 -->
+              <div class="flex items-start gap-4">
+                <div
+                  class="bg-[#E7E6E6] w-20 h-20 rounded-lg flex items-center justify-center flex-shrink-0"
+                >
+                  <img
+                    src="assets/Homepage/plant.png"
+                    alt="Product"
+                    class="w-full h-full object-contain p-2"
+                  />
+                </div>
+                <div class="flex-1 flex flex-col gap-1">
+                  <h4 class="font-semibold text-dark">Green Leafy Plant</h4>
+                  <p class="text-sm text-light">Qty: 2</p>
+                  <p class="font-semibold text-[#1A6109]">$40.46</p>
+                </div>
+              </div>
+
+              <!-- Item 2 -->
+              <div class="flex items-start gap-4">
+                <div
+                  class="bg-[#E7E6E6] w-20 h-20 rounded-lg flex items-center justify-center flex-shrink-0"
+                >
+                  <img
+                    src="assets/Homepage/plant.png"
+                    alt="Product"
+                    class="w-full h-full object-contain p-2"
+                  />
+                </div>
+                <div class="flex-1 flex flex-col gap-1">
+                  <h4 class="font-semibold text-dark">Fresh Carrots</h4>
+                  <p class="text-sm text-light">Qty: 1</p>
+                  <p class="font-semibold text-[#1A6109]">$18.50</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Pricing Details -->
+            <div class="flex flex-col gap-4 border-b border-gray-200 pb-6">
+              <div class="flex justify-between items-center">
+                <p class="text-light">Subtotal</p>
+                <p class="font-semibold text-dark">$58.96</p>
+              </div>
+              <div class="flex justify-between items-center">
+                <p class="text-light">Shipping</p>
+                <p class="font-semibold text-dark">Free</p>
+              </div>
+              <div class="flex justify-between items-center">
+                <p class="text-light">Tax (13%)</p>
+                <p class="font-semibold text-dark">$7.66</p>
+              </div>
+              <div
+                class="flex justify-between items-center bg-[#F381600D] p-3 rounded-lg"
+              >
+                <p class="text-light">Discount</p>
+                <p class="font-semibold text-[#39A116]">-$5.00</p>
+              </div>
+            </div>
+
+            <!-- Total -->
+            <div class="flex justify-between items-center">
+              <p class="text-lg font-bold text-dark">Total</p>
+              <p class="text-3xl font-bold text-[#1A6109]">$61.62</p>
+            </div>
+
+            <!-- Place Order Button -->
+            <button
+              class="w-full bg-[#39A116] hover:bg-[#2d8011] text-white font-bold py-4 rounded-lg transition-colors duration-300 text-lg"
+              type="submit"
+              onclick="window.location.href='index.html'; return false;"
+            >
+              Place Order
+            </button>
+
+            <!-- Continue Shopping -->
+            <a
+              href="product.html"
+              class="w-full border-2 border-[#39A116] text-[#39A116] hover:bg-[#39A116] hover:text-white font-bold py-4 rounded-lg transition-colors duration-300 text-lg text-center"
+            >
+              Continue Shopping
+            </a>
+
+            <!-- Security Badge -->
+            <div class="bg-[#F381600D] p-4 rounded-lg flex items-center gap-3">
+              <svg
+                class="w-6 h-6 text-[#39A116] flex-shrink-0"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+              <p class="text-sm text-dark">
+                Your payment is 100% secure with SSL encryption
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="px-6 py-8 lg:px-12 lg:py-6 bg-black">
+      <div
+        class="flex flex-col lg:flex-row w-full justify-between items-start lg:items-center border-b border-white/20 pb-8 gap-6"
+      >
+        <div class="flex flex-col gap-3 sm:gap-6 max-w-full lg:max-w-[500px]">
+          <h3 class="text-xl sm:text-2xl lg:text-3xl font-bold text-white">
+            Subscribe To Our News letter
+          </h3>
+          <p class="text-white text-xs sm:text-sm lg:text-base leading-relaxed">
+            Sign up today to get exclusive offers and updates on our latest
+            organic products.
+          </p>
+        </div>
+        <div
+          class="flex flex-col w-full sm:flex-row lg:w-[450px] rounded-lg sm:rounded-full overflow-hidden bg-white py-3 px-4 sm:py-2 sm:px-2 gap-3 sm:gap-0"
+        >
+          <input
+            type="text"
+            placeholder="Enter email address"
+            class="flex-1 rounded-md sm:rounded-l-full px-3 sm:px-4 focus:outline-0 border-0 text-xs sm:text-sm lg:text-base py-2 sm:py-0"
+          />
+          <button
+            class="bg-[#39A116] py-2 sm:py-3 px-4 sm:px-4 lg:px-6 text-white text-xs sm:text-sm lg:text-base font-bold rounded-md sm:rounded-full hover:bg-[#2d8011] transition-colors duration-300 whitespace-nowrap"
+          >
+            Subscribe
+          </button>
+        </div>
+      </div>
+
+      <div
+        class="grid grid-cols-2 lg:grid-cols-4 w-full py-8 text-white gap-8 lg:gap-4"
+      >
+        <div class="col-span-2 lg:col-span-1">
+          <img
+            src="assets/Resuable/logo.svg"
+            alt="Logo"
+            width="64"
+            height="64"
+            class="hover:opacity-80 transition-opacity duration-300"
+          />
+        </div>
+        <div class="col-span-1">
+          <h4 class="text-xl lg:text-2xl font-semibold mb-4">INFO</h4>
+          <ul class="flex flex-col gap-2 text-base lg:text-lg text-gray-400">
+            <li>
+              <a
+                href=""
+                class="hover:text-white hover:translate-x-1 inline-block transition-all duration-300"
+                >About Us</a
+              >
+            </li>
+            <li>
+              <a
+                href=""
+                class="hover:text-white hover:translate-x-1 inline-block transition-all duration-300"
+                >Blog</a
+              >
+            </li>
+            <li>
+              <a
+                href=""
+                class="hover:text-white hover:translate-x-1 inline-block transition-all duration-300"
+                >Contact Us</a
+              >
+            </li>
+            <li>
+              <a
+                href=""
+                class="hover:text-white hover:translate-x-1 inline-block transition-all duration-300"
+                >FAQs</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="col-span-1">
+          <h4 class="text-xl lg:text-2xl font-semibold mb-4">PRODUCTS</h4>
+          <ul class="flex flex-col gap-2 text-base lg:text-lg text-gray-400">
+            <li>
+              <a
+                href=""
+                class="hover:text-white hover:translate-x-1 inline-block transition-all duration-300"
+                >All Products</a
+              >
+            </li>
+            <li>
+              <a
+                href=""
+                class="hover:text-white hover:translate-x-1 inline-block transition-all duration-300"
+                >Vegetables</a
+              >
+            </li>
+            <li>
+              <a
+                href=""
+                class="hover:text-white hover:translate-x-1 inline-block transition-all duration-300"
+                >Fruits</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="col-span-2 lg:col-span-1">
+          <h4 class="text-xl lg:text-2xl font-semibold mb-4">CONTACT</h4>
+          <ul class="flex flex-col gap-2 text-base lg:text-lg text-gray-400">
+            <li>
+              <a
+                href="tel:+19999999999"
+                class="hover:text-white hover:translate-x-1 inline-block transition-all duration-300"
+                >+1 (999) 999-99-99</a
+              >
+            </li>
+            <li>
+              <a
+                href="mailto:hello@logoipsum.com"
+                class="hover:text-white hover:translate-x-1 inline-block transition-all duration-300"
+                >hello@logoipsum.com</a
+              >
+            </li>
+            <li>
+              <a
+                href=""
+                class="hover:text-white hover:translate-x-1 inline-block transition-all duration-300"
+                >Kathmandu, Nepal</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div
+        class="flex flex-col md:flex-row items-center w-full justify-between gap-6 pt-6 border-t border-white/20"
+      >
+        <div class="flex items-center gap-3">
+          <a
+            href=""
+            class="p-2.5 flex items-center justify-center border-2 border-gray-600 rounded-full hover:border-white hover:bg-white hover:scale-110 transition-all duration-300 group"
+          >
+            <img
+              src="assets/Homepage/fb.svg"
+              alt="Facebook"
+              width="16"
+              height="16"
+              class="group-hover:brightness-0"
+            />
+          </a>
+          <a
+            href=""
+            class="p-2.5 flex items-center justify-center border-2 border-gray-600 rounded-full hover:border-white hover:bg-white hover:scale-110 transition-all duration-300 group"
+          >
+            <img
+              src="assets/Homepage/fb.svg"
+              alt="Twitter"
+              width="16"
+              height="16"
+              class="group-hover:brightness-0"
+            />
+          </a>
+
+          <a
+            href=""
+            class="p-2.5 flex items-center justify-center border-2 border-gray-600 rounded-full hover:border-white hover:bg-white hover:scale-110 transition-all duration-300 group"
+          >
+            <img
+              src="assets/Homepage/fb.svg"
+              alt="Instagram"
+              width="16"
+              height="16"
+              class="group-hover:brightness-0"
+            />
+          </a>
+
+          <a
+            href=""
+            class="p-2.5 flex items-center justify-center border-2 border-gray-600 rounded-full hover:border-white hover:bg-white hover:scale-110 transition-all duration-300 group"
+          >
+            <img
+              src="assets/Homepage/fb.svg"
+              alt="LinkedIn"
+              width="16"
+              height="16"
+              class="group-hover:brightness-0"
+            />
+          </a>
+          <a
+            href=""
+            class="p-2.5 flex items-center justify-center border-2 border-gray-600 rounded-full hover:border-white hover:bg-white hover:scale-110 transition-all duration-300 group"
+          >
+            <img
+              src="assets/Homepage/fb.svg"
+              alt="YouTube"
+              width="16"
+              height="16"
+              class="group-hover:brightness-0"
+            />
+          </a>
+        </div>
+
+        <p class="text-gray-400 text-sm lg:text-base">© 2023 — Copyright</p>
+      </div>
+    </footer>
+
+    <script>
+      // Hamburger Menu Toggle
+      const hamburger = document.getElementById("hamburger");
+      const mobileMenu = document.getElementById("mobileMenu");
+
+      hamburger.addEventListener("click", function () {
+        hamburger.classList.toggle("active");
+        mobileMenu.classList.toggle("active");
+      });
+
+      // Close menu when a link is clicked
+      const mobileMenuLinks = mobileMenu.querySelectorAll("a");
+      mobileMenuLinks.forEach((link) => {
+        link.addEventListener("click", function () {
+          hamburger.classList.remove("active");
+          mobileMenu.classList.remove("active");
+        });
+      });
+
+      // Close menu when clicking outside
+      document.addEventListener("click", function (event) {
+        if (
+          !hamburger.contains(event.target) &&
+          !mobileMenu.contains(event.target)
+        ) {
+          hamburger.classList.remove("active");
+          mobileMenu.classList.remove("active");
+        }
+      });
+    </script>
+  </body>
+</html>

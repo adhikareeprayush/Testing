@@ -1505,6 +1505,20 @@
           document.body.style.overflow = "auto";
         }
       });
+
+      // Route product cards to individual product page
+      const productCards = document.querySelectorAll(".grid .group");
+      productCards.forEach((card) => {
+        card.addEventListener("click", function (e) {
+          // Prevent navigation if cart button was clicked
+          if (e.target.closest("button")) {
+            e.stopPropagation();
+            return;
+          }
+          // Navigate to product individual page
+          window.location.href = "product_individual.html";
+        });
+      });
     </script>
 
     <!-- Footer -->
