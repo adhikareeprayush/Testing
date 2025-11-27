@@ -31,10 +31,25 @@
             <a href="product.html">Products</a>
           </li>
           <li>
-            <a href="index.html">Gallery</a>
+            <a
+              href="index.html"
+              class="hover:text-[#39A116] transition-colors duration-300"
+              >Gallery</a
+            >
           </li>
           <li>
-            <a href="index.html">About</a>
+            <a
+              href="farmers_stoties.html"
+              class="hover:text-[#39A116] transition-colors duration-300"
+              >Farmers Stories</a
+            >
+          </li>
+          <li>
+            <a
+              href="contact.html"
+              class="hover:text-[#39A116] transition-colors duration-300"
+              >Contact</a
+            >
           </li>
         </ul>
       </div>
@@ -537,36 +552,7 @@
       </div>
     </div>
 
-    <script>
-      // Hamburger Menu Toggle
-      const hamburger = document.getElementById("hamburger");
-      const mobileMenu = document.getElementById("mobileMenu");
-
-      hamburger.addEventListener("click", function () {
-        hamburger.classList.toggle("active");
-        mobileMenu.classList.toggle("active");
-      });
-
-      // Close menu when a link is clicked
-      const mobileMenuLinks = mobileMenu.querySelectorAll("a");
-      mobileMenuLinks.forEach((link) => {
-        link.addEventListener("click", function () {
-          hamburger.classList.remove("active");
-          mobileMenu.classList.remove("active");
-        });
-      });
-
-      // Close menu when clicking outside
-      document.addEventListener("click", function (event) {
-        if (
-          !hamburger.contains(event.target) &&
-          !mobileMenu.contains(event.target)
-        ) {
-          hamburger.classList.remove("active");
-          mobileMenu.classList.remove("active");
-        }
-      });
-    </script>
+    <script src="main.js"></script>
 
     <!-- Footer -->
     <footer class="px-6 py-8 lg:px-12 lg:py-6 bg-black">

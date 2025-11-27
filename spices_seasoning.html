@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Organic Shop Nepal</title>
+    <title>Spices & Seasoning - Organic Shop Nepal</title>
     <link rel="stylesheet" href="style.css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="tailwind.config.js"></script>
@@ -126,7 +126,10 @@
           <a href="index.html">Gallery</a>
         </li>
         <li>
-          <a href="index.html">About</a>
+          <a href="farmers_stoties.html">Farmers Stories</a>
+        </li>
+        <li>
+          <a href="contact.html">Contact</a>
         </li>
       </ul>
     </div>
@@ -201,6 +204,7 @@
             </button>
           </div>
           <div class="flex flex-col gap-6 lg:gap-8">
+            <!-- Filter by price -->
             <div class="flex flex-col gap-3">
               <h4 class="text-2xl lg:text-3xl font-medium">Filter by price</h4>
 
@@ -211,7 +215,7 @@
                 <input
                   type="range"
                   min="0"
-                  max="1000"
+                  max="600"
                   value="0"
                   class="slider slider-min"
                   id="minRange"
@@ -219,8 +223,8 @@
                 <input
                   type="range"
                   min="0"
-                  max="1000"
-                  value="1000"
+                  max="600"
+                  value="600"
                   class="slider slider-max"
                   id="maxRange"
                 />
@@ -252,24 +256,86 @@
               </div>
             </div>
 
+            <!-- Filter by Spice Type -->
+            <div class="flex flex-col gap-3">
+              <h4 class="text-2xl lg:text-3xl font-medium">Spice Type</h4>
+              <div class="flex flex-col gap-2">
+                <label class="flex items-center gap-2 cursor-pointer">
+                  <input type="checkbox" class="w-4 h-4 rounded border-dark" />
+                  <span class="text-sm lg:text-base">Powder Spices</span>
+                </label>
+                <label class="flex items-center gap-2 cursor-pointer">
+                  <input type="checkbox" class="w-4 h-4 rounded border-dark" />
+                  <span class="text-sm lg:text-base">Whole Spices</span>
+                </label>
+                <label class="flex items-center gap-2 cursor-pointer">
+                  <input type="checkbox" class="w-4 h-4 rounded border-dark" />
+                  <span class="text-sm lg:text-base">Herbs & Seasonings</span>
+                </label>
+                <label class="flex items-center gap-2 cursor-pointer">
+                  <input type="checkbox" class="w-4 h-4 rounded border-dark" />
+                  <span class="text-sm lg:text-base">Spice Blends</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Filter by Origin -->
+            <div class="flex flex-col gap-3">
+              <h4 class="text-2xl lg:text-3xl font-medium">Origin</h4>
+              <div class="flex flex-col gap-2">
+                <label class="flex items-center gap-2 cursor-pointer">
+                  <input type="checkbox" class="w-4 h-4 rounded border-dark" />
+                  <span class="text-sm lg:text-base">Nepal Origin</span>
+                </label>
+                <label class="flex items-center gap-2 cursor-pointer">
+                  <input type="checkbox" class="w-4 h-4 rounded border-dark" />
+                  <span class="text-sm lg:text-base">Import (Fair Trade)</span>
+                </label>
+                <label class="flex items-center gap-2 cursor-pointer">
+                  <input type="checkbox" class="w-4 h-4 rounded border-dark" />
+                  <span class="text-sm lg:text-base">Organic Certified</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Filter by Packaging -->
+            <div class="flex flex-col gap-3">
+              <h4 class="text-2xl lg:text-3xl font-medium">Packaging</h4>
+              <div class="flex flex-col gap-2">
+                <label class="flex items-center gap-2 cursor-pointer">
+                  <input type="checkbox" class="w-4 h-4 rounded border-dark" />
+                  <span class="text-sm lg:text-base">Small (50-100g)</span>
+                </label>
+                <label class="flex items-center gap-2 cursor-pointer">
+                  <input type="checkbox" class="w-4 h-4 rounded border-dark" />
+                  <span class="text-sm lg:text-base">Medium (250-500g)</span>
+                </label>
+                <label class="flex items-center gap-2 cursor-pointer">
+                  <input type="checkbox" class="w-4 h-4 rounded border-dark" />
+                  <span class="text-sm lg:text-base">Large (1kg+)</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Featured Product in Sidebar -->
             <div class="flex flex-col gap-3 group relative">
               <div
                 class="bg-[#E7E6E6] w-full px-6 py-4 h-[250px] sm:h-[280px] md:h-[325px] flex items-center justify-center rounded-lg overflow-hidden relative group-hover:shadow-xl transition-all duration-300"
               >
                 <img
                   src="assets/Homepage/plant.png"
-                  alt="Green Leafy plant"
+                  alt="Turmeric Powder"
                   class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500"
                 />
                 <div
                   class="absolute top-3 right-3 bg-[#f0b70d] text-white px-2.5 py-1 rounded-full text-xs md:text-sm font-semibold"
                 >
-                  Sale!
+                  Best!
                 </div>
                 <div
                   class="absolute bottom-3 left-3 bg-white px-3 py-1.5 rounded-lg shadow-md text-xs md:text-sm font-semibold text-dark"
                 >
-                  Stock: 32
+                  Stock: 220
                 </div>
                 <button
                   class="absolute bottom-4 right-4 bg-[#39A116] text-white p-3 rounded-full opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 hover:bg-[#2d8011]"
@@ -287,12 +353,12 @@
                   <p
                     class="text-base md:text-lg font-serif font-medium text-gray-600"
                   >
-                    Groceries
+                    Spices
                   </p>
                   <h4
                     class="text-lg md:text-xl lg:text-2xl font-medium group-hover:text-[#39A116] transition-colors duration-300"
                   >
-                    Green Leafy plant
+                    Turmeric Powder
                   </h4>
                 </div>
                 <div class="flex items-center gap-1">
@@ -333,177 +399,7 @@
                   />
                 </div>
                 <h5 class="text-[#1A6109] font-semibold text-lg md:text-xl">
-                  $20.23
-                </h5>
-              </div>
-            </div>
-            <div class="flex flex-col gap-3 group relative">
-              <div
-                class="bg-[#E7E6E6] w-full px-6 py-4 h-[280px] md:h-[325px] flex items-center justify-center rounded-lg overflow-hidden relative group-hover:shadow-xl transition-all duration-300"
-              >
-                <img
-                  src="assets/Homepage/plant.png"
-                  alt="Green Leafy plant"
-                  class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500"
-                />
-                <div
-                  class="absolute top-3 right-3 bg-[#f0b70d] text-white px-2.5 py-1 rounded-full text-xs md:text-sm font-semibold"
-                >
-                  Sale!
-                </div>
-                <div
-                  class="absolute bottom-3 left-3 bg-white px-3 py-1.5 rounded-lg shadow-md text-xs md:text-sm font-semibold text-dark"
-                >
-                  Stock: 38
-                </div>
-                <button
-                  class="absolute bottom-4 right-4 bg-[#39A116] text-white p-3 rounded-full opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 hover:bg-[#2d8011]"
-                >
-                  <img
-                    src="assets/Resuable/cart.svg"
-                    alt=""
-                    width="20"
-                    height="20"
-                  />
-                </button>
-              </div>
-              <div class="flex flex-col items-center gap-2">
-                <div class="flex flex-col w-full items-center">
-                  <p
-                    class="text-base md:text-lg font-serif font-medium text-gray-600"
-                  >
-                    Groceries
-                  </p>
-                  <h4
-                    class="text-lg md:text-xl lg:text-2xl font-medium group-hover:text-[#39A116] transition-colors duration-300"
-                  >
-                    Green Leafy plant
-                  </h4>
-                </div>
-                <div class="flex items-center gap-1">
-                  <img
-                    src="assets/Resuable/star.svg"
-                    alt="star"
-                    width="20"
-                    height="20"
-                    class="md:w-6 md:h-6"
-                  />
-                  <img
-                    src="assets/Resuable/star.svg"
-                    alt="star"
-                    width="20"
-                    height="20"
-                    class="md:w-6 md:h-6"
-                  />
-                  <img
-                    src="assets/Resuable/star.svg"
-                    alt="star"
-                    width="20"
-                    height="20"
-                    class="md:w-6 md:h-6"
-                  />
-                  <img
-                    src="assets/Resuable/star.svg"
-                    alt="star"
-                    width="20"
-                    height="20"
-                    class="md:w-6 md:h-6"
-                  />
-                  <img
-                    src="assets/Resuable/star.svg"
-                    alt="star"
-                    width="20"
-                    height="20"
-                    class="md:w-6 md:h-6"
-                  />
-                </div>
-                <h5 class="text-[#1A6109] font-semibold text-lg md:text-xl">
-                  $20.23
-                </h5>
-              </div>
-            </div>
-            <div class="flex flex-col gap-3 group relative">
-              <div
-                class="bg-[#E7E6E6] w-full px-6 py-4 h-[280px] md:h-[325px] flex items-center justify-center rounded-lg overflow-hidden relative group-hover:shadow-xl transition-all duration-300"
-              >
-                <img
-                  src="assets/Homepage/plant.png"
-                  alt="Green Leafy plant"
-                  class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500"
-                />
-                <div
-                  class="absolute top-3 right-3 bg-[#f0b70d] text-white px-2.5 py-1 rounded-full text-xs md:text-sm font-semibold"
-                >
-                  Sale!
-                </div>
-                <div
-                  class="absolute bottom-3 left-3 bg-white px-3 py-1.5 rounded-lg shadow-md text-xs md:text-sm font-semibold text-dark"
-                >
-                  Stock: 56
-                </div>
-                <button
-                  class="absolute bottom-4 right-4 bg-[#39A116] text-white p-3 rounded-full opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 hover:bg-[#2d8011]"
-                >
-                  <img
-                    src="assets/Resuable/cart.svg"
-                    alt=""
-                    width="20"
-                    height="20"
-                  />
-                </button>
-              </div>
-              <div class="flex flex-col items-center gap-2">
-                <div class="flex flex-col w-full items-center">
-                  <p
-                    class="text-base md:text-lg font-serif font-medium text-gray-600"
-                  >
-                    Groceries
-                  </p>
-                  <h4
-                    class="text-lg md:text-xl lg:text-2xl font-medium group-hover:text-[#39A116] transition-colors duration-300"
-                  >
-                    Green Leafy plant
-                  </h4>
-                </div>
-                <div class="flex items-center gap-1">
-                  <img
-                    src="assets/Resuable/star.svg"
-                    alt="star"
-                    width="20"
-                    height="20"
-                    class="md:w-6 md:h-6"
-                  />
-                  <img
-                    src="assets/Resuable/star.svg"
-                    alt="star"
-                    width="20"
-                    height="20"
-                    class="md:w-6 md:h-6"
-                  />
-                  <img
-                    src="assets/Resuable/star.svg"
-                    alt="star"
-                    width="20"
-                    height="20"
-                    class="md:w-6 md:h-6"
-                  />
-                  <img
-                    src="assets/Resuable/star.svg"
-                    alt="star"
-                    width="20"
-                    height="20"
-                    class="md:w-6 md:h-6"
-                  />
-                  <img
-                    src="assets/Resuable/star.svg"
-                    alt="star"
-                    width="20"
-                    height="20"
-                    class="md:w-6 md:h-6"
-                  />
-                </div>
-                <h5 class="text-[#1A6109] font-semibold text-lg md:text-xl">
-                  $20.23
+                  $2.99 / 100g
                 </h5>
               </div>
             </div>
@@ -512,153 +408,22 @@
       </div>
 
       <div class="flex flex-col gap-2.5 px-4 lg:px-3 w-full lg:w-auto">
-        <p class="text-base lg:text-xl">Home / Products</p>
+        <p class="text-base lg:text-xl">Home / Products / Spices & Seasoning</p>
         <h2 class="text-[#39A116] text-3xl lg:text-5xl font-medium">
-          Products
+          Spices & Seasoning
         </h2>
         <p class="text-sm lg:text-lg">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-          dignissim, velit et luctus interdum, est quam scelerisque tellus, eget
-          luctus mi diam vitae erat. Praesent porttitor lacus vitae dictum
-          posuere. Suspendisse elementum metus ac dolor tincidunt, eu imperdiet
-          nisi dictum.
+          Authentic, aromatic spices and seasonings sourced from trusted local
+          farmers. Our carefully selected collection brings authentic flavors
+          from Nepal and around the world, perfect for traditional and modern
+          cuisine.
         </p>
-
-        <!-- Categories Section -->
-        <div class="flex flex-col w-full gap-6 py-8">
-          <h3 class="text-2xl lg:text-3xl font-medium">Shop by Category</h3>
-          <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
-            <!-- Category Card 1: Vegetables & Fruits -->
-            <a
-              href="vegetables_fruits.html"
-              class="flex flex-col gap-3 group cursor-pointer"
-            >
-              <div
-                class="bg-[#E7E6E6] w-full px-4 py-6 h-[200px] flex items-center justify-center rounded-lg overflow-hidden relative group-hover:shadow-xl transition-all duration-300"
-              >
-                <img
-                  src="assets/Homepage/plant.png"
-                  alt="Vegetables & Fruits"
-                  class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500"
-                />
-              </div>
-              <div class="flex flex-col items-center gap-1">
-                <h5
-                  class="text-base lg:text-lg font-medium group-hover:text-[#39A116] transition-colors duration-300"
-                >
-                  Vegetables & Fruits
-                </h5>
-                <p class="text-xs lg:text-sm text-gray-600">Fresh & Organic</p>
-              </div>
-            </a>
-
-            <!-- Category Card 2: Dairy Products -->
-            <a
-              href="dairy_products.html"
-              class="flex flex-col gap-3 group cursor-pointer"
-            >
-              <div
-                class="bg-[#E7E6E6] w-full px-4 py-6 h-[200px] flex items-center justify-center rounded-lg overflow-hidden relative group-hover:shadow-xl transition-all duration-300"
-              >
-                <img
-                  src="assets/Homepage/plant.png"
-                  alt="Dairy Products"
-                  class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500"
-                />
-              </div>
-              <div class="flex flex-col items-center gap-1">
-                <h5
-                  class="text-base lg:text-lg font-medium group-hover:text-[#39A116] transition-colors duration-300"
-                >
-                  Dairy Products
-                </h5>
-                <p class="text-xs lg:text-sm text-gray-600">Pure & Fresh</p>
-              </div>
-            </a>
-
-            <!-- Category Card 3: Spices & Seasoning -->
-            <a
-              href="spices_seasoning.html"
-              class="flex flex-col gap-3 group cursor-pointer"
-            >
-              <div
-                class="bg-[#E7E6E6] w-full px-4 py-6 h-[200px] flex items-center justify-center rounded-lg overflow-hidden relative group-hover:shadow-xl transition-all duration-300"
-              >
-                <img
-                  src="assets/Homepage/plant.png"
-                  alt="Spices & Seasoning"
-                  class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500"
-                />
-              </div>
-              <div class="flex flex-col items-center gap-1">
-                <h5
-                  class="text-base lg:text-lg font-medium group-hover:text-[#39A116] transition-colors duration-300"
-                >
-                  Spices & Seasoning
-                </h5>
-                <p class="text-xs lg:text-sm text-gray-600">Aromatic Flavors</p>
-              </div>
-            </a>
-
-            <!-- Category Card 4: Local Groceries -->
-            <a
-              href="local_groceries.html"
-              class="flex flex-col gap-3 group cursor-pointer"
-            >
-              <div
-                class="bg-[#E7E6E6] w-full px-4 py-6 h-[200px] flex items-center justify-center rounded-lg overflow-hidden relative group-hover:shadow-xl transition-all duration-300"
-              >
-                <img
-                  src="assets/Homepage/plant.png"
-                  alt="Local Groceries"
-                  class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500"
-                />
-              </div>
-              <div class="flex flex-col items-center gap-1">
-                <h5
-                  class="text-base lg:text-lg font-medium group-hover:text-[#39A116] transition-colors duration-300"
-                >
-                  Local Groceries
-                </h5>
-                <p class="text-xs lg:text-sm text-gray-600">
-                  Staples & Essentials
-                </p>
-              </div>
-            </a>
-
-            <!-- Category Card 5: Local Seasonal Products -->
-            <a
-              href="local_seasonal_products.html"
-              class="flex flex-col gap-3 group cursor-pointer"
-            >
-              <div
-                class="bg-[#E7E6E6] w-full px-4 py-6 h-[200px] flex items-center justify-center rounded-lg overflow-hidden relative group-hover:shadow-xl transition-all duration-300"
-              >
-                <img
-                  src="assets/Homepage/plant.png"
-                  alt="Local Seasonal Products"
-                  class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500"
-                />
-              </div>
-              <div class="flex flex-col items-center gap-1">
-                <h5
-                  class="text-base lg:text-lg font-medium group-hover:text-[#39A116] transition-colors duration-300"
-                >
-                  Local Seasonal
-                </h5>
-                <p class="text-xs lg:text-sm text-gray-600">
-                  Seasonal Specials
-                </p>
-              </div>
-            </a>
-          </div>
-        </div>
 
         <div class="flex flex-col w-full gap-4">
           <div
             class="flex flex-col sm:flex-row items-start sm:items-center w-full justify-between gap-3"
           >
-            <p class="text-sm lg:text-base">Showing 1-9 of 10 results</p>
+            <p class="text-sm lg:text-base">Showing 1-12 of 36 results</p>
             <button
               class="text-light flex items-center gap-1 text-sm lg:text-base"
             >
@@ -675,24 +440,20 @@
           <div
             class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 w-full gap-6"
           >
-            <div class="flex flex-col gap-3 group relative">
+            <!-- Product Card 1: Turmeric Powder -->
+            <div class="flex flex-col gap-3 group relative cursor-pointer">
               <div
                 class="bg-[#E7E6E6] w-full px-6 py-4 h-[280px] md:h-[325px] flex items-center justify-center rounded-lg overflow-hidden relative group-hover:shadow-xl transition-all duration-300"
               >
                 <img
                   src="assets/Homepage/plant.png"
-                  alt="Green Leafy plant"
+                  alt="Turmeric Powder"
                   class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500"
                 />
-                <div
-                  class="absolute top-3 right-3 bg-[#f0b70d] text-white px-2.5 py-1 rounded-full text-xs md:text-sm font-semibold"
-                >
-                  Sale!
-                </div>
                 <div
                   class="absolute bottom-3 left-3 bg-white px-3 py-1.5 rounded-lg shadow-md text-xs md:text-sm font-semibold text-dark"
                 >
-                  Stock: 45
+                  Stock: 180
                 </div>
                 <button
                   class="absolute bottom-4 right-4 bg-[#39A116] text-white p-3 rounded-full opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 hover:bg-[#2d8011]"
@@ -710,12 +471,12 @@
                   <p
                     class="text-base md:text-lg font-serif font-medium text-gray-600"
                   >
-                    Groceries
+                    Powder Spices
                   </p>
                   <h4
                     class="text-lg md:text-xl lg:text-2xl font-medium group-hover:text-[#39A116] transition-colors duration-300"
                   >
-                    Green Leafy plant
+                    Turmeric Powder
                   </h4>
                 </div>
                 <div class="flex items-center gap-1">
@@ -756,19 +517,26 @@
                   />
                 </div>
                 <h5 class="text-[#1A6109] font-semibold text-lg md:text-xl">
-                  $20.23
+                  $2.99 / 100g
                 </h5>
               </div>
             </div>
-            <div class="flex flex-col gap-3 group">
+
+            <!-- Product Card 2: Cumin Powder -->
+            <div class="flex flex-col gap-3 group relative cursor-pointer">
               <div
                 class="bg-[#E7E6E6] w-full px-6 py-4 h-[280px] md:h-[325px] flex items-center justify-center rounded-lg overflow-hidden relative group-hover:shadow-xl transition-all duration-300"
               >
                 <img
                   src="assets/Homepage/plant.png"
-                  alt="Green Leafy plant"
+                  alt="Cumin Powder"
                   class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500"
                 />
+                <div
+                  class="absolute bottom-3 left-3 bg-white px-3 py-1.5 rounded-lg shadow-md text-xs md:text-sm font-semibold text-dark"
+                >
+                  Stock: 150
+                </div>
                 <button
                   class="absolute bottom-4 right-4 bg-[#39A116] text-white p-3 rounded-full opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 hover:bg-[#2d8011]"
                 >
@@ -785,12 +553,12 @@
                   <p
                     class="text-base md:text-lg font-serif font-medium text-gray-600"
                   >
-                    Groceries
+                    Powder Spices
                   </p>
                   <h4
                     class="text-lg md:text-xl lg:text-2xl font-medium group-hover:text-[#39A116] transition-colors duration-300"
                   >
-                    Green Leafy plant
+                    Cumin Powder
                   </h4>
                 </div>
                 <div class="flex items-center gap-1">
@@ -831,19 +599,26 @@
                   />
                 </div>
                 <h5 class="text-[#1A6109] font-semibold text-lg md:text-xl">
-                  $20.23
+                  $3.49 / 100g
                 </h5>
               </div>
             </div>
-            <div class="flex flex-col gap-3 group">
+
+            <!-- Product Card 3: Cinnamon Powder -->
+            <div class="flex flex-col gap-3 group relative cursor-pointer">
               <div
                 class="bg-[#E7E6E6] w-full px-6 py-4 h-[280px] md:h-[325px] flex items-center justify-center rounded-lg overflow-hidden relative group-hover:shadow-xl transition-all duration-300"
               >
                 <img
                   src="assets/Homepage/plant.png"
-                  alt="Green Leafy plant"
+                  alt="Cinnamon Powder"
                   class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500"
                 />
+                <div
+                  class="absolute bottom-3 left-3 bg-white px-3 py-1.5 rounded-lg shadow-md text-xs md:text-sm font-semibold text-dark"
+                >
+                  Stock: 95
+                </div>
                 <button
                   class="absolute bottom-4 right-4 bg-[#39A116] text-white p-3 rounded-full opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 hover:bg-[#2d8011]"
                 >
@@ -860,12 +635,12 @@
                   <p
                     class="text-base md:text-lg font-serif font-medium text-gray-600"
                   >
-                    Groceries
+                    Powder Spices
                   </p>
                   <h4
                     class="text-lg md:text-xl lg:text-2xl font-medium group-hover:text-[#39A116] transition-colors duration-300"
                   >
-                    Green Leafy plant
+                    Cinnamon Powder
                   </h4>
                 </div>
                 <div class="flex items-center gap-1">
@@ -906,19 +681,26 @@
                   />
                 </div>
                 <h5 class="text-[#1A6109] font-semibold text-lg md:text-xl">
-                  $20.23
+                  $4.99 / 100g
                 </h5>
               </div>
             </div>
-            <div class="flex flex-col gap-3 group">
+
+            <!-- Product Card 4: Cardamom -->
+            <div class="flex flex-col gap-3 group relative cursor-pointer">
               <div
                 class="bg-[#E7E6E6] w-full px-6 py-4 h-[280px] md:h-[325px] flex items-center justify-center rounded-lg overflow-hidden relative group-hover:shadow-xl transition-all duration-300"
               >
                 <img
                   src="assets/Homepage/plant.png"
-                  alt="Green Leafy plant"
+                  alt="Green Cardamom"
                   class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500"
                 />
+                <div
+                  class="absolute bottom-3 left-3 bg-white px-3 py-1.5 rounded-lg shadow-md text-xs md:text-sm font-semibold text-dark"
+                >
+                  Stock: 78
+                </div>
                 <button
                   class="absolute bottom-4 right-4 bg-[#39A116] text-white p-3 rounded-full opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 hover:bg-[#2d8011]"
                 >
@@ -935,12 +717,12 @@
                   <p
                     class="text-base md:text-lg font-serif font-medium text-gray-600"
                   >
-                    Groceries
+                    Whole Spices
                   </p>
                   <h4
                     class="text-lg md:text-xl lg:text-2xl font-medium group-hover:text-[#39A116] transition-colors duration-300"
                   >
-                    Green Leafy plant
+                    Green Cardamom
                   </h4>
                 </div>
                 <div class="flex items-center gap-1">
@@ -981,19 +763,26 @@
                   />
                 </div>
                 <h5 class="text-[#1A6109] font-semibold text-lg md:text-xl">
-                  $20.23
+                  $8.99 / 100g
                 </h5>
               </div>
             </div>
-            <div class="flex flex-col gap-3 group">
+
+            <!-- Product Card 5: Cloves -->
+            <div class="flex flex-col gap-3 group relative cursor-pointer">
               <div
                 class="bg-[#E7E6E6] w-full px-6 py-4 h-[280px] md:h-[325px] flex items-center justify-center rounded-lg overflow-hidden relative group-hover:shadow-xl transition-all duration-300"
               >
                 <img
                   src="assets/Homepage/plant.png"
-                  alt="Green Leafy plant"
+                  alt="Whole Cloves"
                   class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500"
                 />
+                <div
+                  class="absolute bottom-3 left-3 bg-white px-3 py-1.5 rounded-lg shadow-md text-xs md:text-sm font-semibold text-dark"
+                >
+                  Stock: 110
+                </div>
                 <button
                   class="absolute bottom-4 right-4 bg-[#39A116] text-white p-3 rounded-full opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 hover:bg-[#2d8011]"
                 >
@@ -1010,12 +799,12 @@
                   <p
                     class="text-base md:text-lg font-serif font-medium text-gray-600"
                   >
-                    Groceries
+                    Whole Spices
                   </p>
                   <h4
                     class="text-lg md:text-xl lg:text-2xl font-medium group-hover:text-[#39A116] transition-colors duration-300"
                   >
-                    Green Leafy plant
+                    Whole Cloves
                   </h4>
                 </div>
                 <div class="flex items-center gap-1">
@@ -1056,19 +845,26 @@
                   />
                 </div>
                 <h5 class="text-[#1A6109] font-semibold text-lg md:text-xl">
-                  $20.23
+                  $5.99 / 50g
                 </h5>
               </div>
             </div>
-            <div class="flex flex-col gap-3 group">
+
+            <!-- Product Card 6: Garam Masala -->
+            <div class="flex flex-col gap-3 group relative cursor-pointer">
               <div
                 class="bg-[#E7E6E6] w-full px-6 py-4 h-[280px] md:h-[325px] flex items-center justify-center rounded-lg overflow-hidden relative group-hover:shadow-xl transition-all duration-300"
               >
                 <img
                   src="assets/Homepage/plant.png"
-                  alt="Green Leafy plant"
+                  alt="Garam Masala Blend"
                   class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500"
                 />
+                <div
+                  class="absolute bottom-3 left-3 bg-white px-3 py-1.5 rounded-lg shadow-md text-xs md:text-sm font-semibold text-dark"
+                >
+                  Stock: 130
+                </div>
                 <button
                   class="absolute bottom-4 right-4 bg-[#39A116] text-white p-3 rounded-full opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 hover:bg-[#2d8011]"
                 >
@@ -1085,12 +881,12 @@
                   <p
                     class="text-base md:text-lg font-serif font-medium text-gray-600"
                   >
-                    Groceries
+                    Spice Blends
                   </p>
                   <h4
                     class="text-lg md:text-xl lg:text-2xl font-medium group-hover:text-[#39A116] transition-colors duration-300"
                   >
-                    Green Leafy plant
+                    Garam Masala
                   </h4>
                 </div>
                 <div class="flex items-center gap-1">
@@ -1131,382 +927,7 @@
                   />
                 </div>
                 <h5 class="text-[#1A6109] font-semibold text-lg md:text-xl">
-                  $20.23
-                </h5>
-              </div>
-            </div>
-            <div class="flex flex-col gap-3 group">
-              <div
-                class="bg-[#E7E6E6] w-full px-6 py-4 h-[280px] md:h-[325px] flex items-center justify-center rounded-lg overflow-hidden relative group-hover:shadow-xl transition-all duration-300"
-              >
-                <img
-                  src="assets/Homepage/plant.png"
-                  alt="Green Leafy plant"
-                  class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500"
-                />
-                <button
-                  class="absolute bottom-4 right-4 bg-[#39A116] text-white p-3 rounded-full opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 hover:bg-[#2d8011]"
-                >
-                  <img
-                    src="assets/Resuable/cart.svg"
-                    alt=""
-                    width="20"
-                    height="20"
-                  />
-                </button>
-              </div>
-              <div class="flex flex-col items-center gap-2">
-                <div class="flex flex-col w-full items-center">
-                  <p
-                    class="text-base md:text-lg font-serif font-medium text-gray-600"
-                  >
-                    Groceries
-                  </p>
-                  <h4
-                    class="text-lg md:text-xl lg:text-2xl font-medium group-hover:text-[#39A116] transition-colors duration-300"
-                  >
-                    Green Leafy plant
-                  </h4>
-                </div>
-                <div class="flex items-center gap-1">
-                  <img
-                    src="assets/Resuable/star.svg"
-                    alt="star"
-                    width="20"
-                    height="20"
-                    class="md:w-6 md:h-6"
-                  />
-                  <img
-                    src="assets/Resuable/star.svg"
-                    alt="star"
-                    width="20"
-                    height="20"
-                    class="md:w-6 md:h-6"
-                  />
-                  <img
-                    src="assets/Resuable/star.svg"
-                    alt="star"
-                    width="20"
-                    height="20"
-                    class="md:w-6 md:h-6"
-                  />
-                  <img
-                    src="assets/Resuable/star.svg"
-                    alt="star"
-                    width="20"
-                    height="20"
-                    class="md:w-6 md:h-6"
-                  />
-                  <img
-                    src="assets/Resuable/star.svg"
-                    alt="star"
-                    width="20"
-                    height="20"
-                    class="md:w-6 md:h-6"
-                  />
-                </div>
-                <h5 class="text-[#1A6109] font-semibold text-lg md:text-xl">
-                  $20.23
-                </h5>
-              </div>
-            </div>
-            <div class="flex flex-col gap-3 group">
-              <div
-                class="bg-[#E7E6E6] w-full px-6 py-4 h-[280px] md:h-[325px] flex items-center justify-center rounded-lg overflow-hidden relative group-hover:shadow-xl transition-all duration-300"
-              >
-                <img
-                  src="assets/Homepage/plant.png"
-                  alt="Green Leafy plant"
-                  class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500"
-                />
-                <button
-                  class="absolute bottom-4 right-4 bg-[#39A116] text-white p-3 rounded-full opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 hover:bg-[#2d8011]"
-                >
-                  <img
-                    src="assets/Resuable/cart.svg"
-                    alt=""
-                    width="20"
-                    height="20"
-                  />
-                </button>
-              </div>
-              <div class="flex flex-col items-center gap-2">
-                <div class="flex flex-col w-full items-center">
-                  <p
-                    class="text-base md:text-lg font-serif font-medium text-gray-600"
-                  >
-                    Groceries
-                  </p>
-                  <h4
-                    class="text-lg md:text-xl lg:text-2xl font-medium group-hover:text-[#39A116] transition-colors duration-300"
-                  >
-                    Green Leafy plant
-                  </h4>
-                </div>
-                <div class="flex items-center gap-1">
-                  <img
-                    src="assets/Resuable/star.svg"
-                    alt="star"
-                    width="20"
-                    height="20"
-                    class="md:w-6 md:h-6"
-                  />
-                  <img
-                    src="assets/Resuable/star.svg"
-                    alt="star"
-                    width="20"
-                    height="20"
-                    class="md:w-6 md:h-6"
-                  />
-                  <img
-                    src="assets/Resuable/star.svg"
-                    alt="star"
-                    width="20"
-                    height="20"
-                    class="md:w-6 md:h-6"
-                  />
-                  <img
-                    src="assets/Resuable/star.svg"
-                    alt="star"
-                    width="20"
-                    height="20"
-                    class="md:w-6 md:h-6"
-                  />
-                  <img
-                    src="assets/Resuable/star.svg"
-                    alt="star"
-                    width="20"
-                    height="20"
-                    class="md:w-6 md:h-6"
-                  />
-                </div>
-                <h5 class="text-[#1A6109] font-semibold text-lg md:text-xl">
-                  $20.23
-                </h5>
-              </div>
-            </div>
-            <div class="flex flex-col gap-3 group">
-              <div
-                class="bg-[#E7E6E6] w-full px-6 py-4 h-[280px] md:h-[325px] flex items-center justify-center rounded-lg overflow-hidden relative group-hover:shadow-xl transition-all duration-300"
-              >
-                <img
-                  src="assets/Homepage/plant.png"
-                  alt="Green Leafy plant"
-                  class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500"
-                />
-                <button
-                  class="absolute bottom-4 right-4 bg-[#39A116] text-white p-3 rounded-full opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 hover:bg-[#2d8011]"
-                >
-                  <img
-                    src="assets/Resuable/cart.svg"
-                    alt=""
-                    width="20"
-                    height="20"
-                  />
-                </button>
-              </div>
-              <div class="flex flex-col items-center gap-2">
-                <div class="flex flex-col w-full items-center">
-                  <p
-                    class="text-base md:text-lg font-serif font-medium text-gray-600"
-                  >
-                    Groceries
-                  </p>
-                  <h4
-                    class="text-lg md:text-xl lg:text-2xl font-medium group-hover:text-[#39A116] transition-colors duration-300"
-                  >
-                    Green Leafy plant
-                  </h4>
-                </div>
-                <div class="flex items-center gap-1">
-                  <img
-                    src="assets/Resuable/star.svg"
-                    alt="star"
-                    width="20"
-                    height="20"
-                    class="md:w-6 md:h-6"
-                  />
-                  <img
-                    src="assets/Resuable/star.svg"
-                    alt="star"
-                    width="20"
-                    height="20"
-                    class="md:w-6 md:h-6"
-                  />
-                  <img
-                    src="assets/Resuable/star.svg"
-                    alt="star"
-                    width="20"
-                    height="20"
-                    class="md:w-6 md:h-6"
-                  />
-                  <img
-                    src="assets/Resuable/star.svg"
-                    alt="star"
-                    width="20"
-                    height="20"
-                    class="md:w-6 md:h-6"
-                  />
-                  <img
-                    src="assets/Resuable/star.svg"
-                    alt="star"
-                    width="20"
-                    height="20"
-                    class="md:w-6 md:h-6"
-                  />
-                </div>
-                <h5 class="text-[#1A6109] font-semibold text-lg md:text-xl">
-                  $20.23
-                </h5>
-              </div>
-            </div>
-            <div class="flex flex-col gap-3 group">
-              <div
-                class="bg-[#E7E6E6] w-full px-6 py-4 h-[280px] md:h-[325px] flex items-center justify-center rounded-lg overflow-hidden relative group-hover:shadow-xl transition-all duration-300"
-              >
-                <img
-                  src="assets/Homepage/plant.png"
-                  alt="Green Leafy plant"
-                  class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500"
-                />
-                <button
-                  class="absolute bottom-4 right-4 bg-[#39A116] text-white p-3 rounded-full opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 hover:bg-[#2d8011]"
-                >
-                  <img
-                    src="assets/Resuable/cart.svg"
-                    alt=""
-                    width="20"
-                    height="20"
-                  />
-                </button>
-              </div>
-              <div class="flex flex-col items-center gap-2">
-                <div class="flex flex-col w-full items-center">
-                  <p
-                    class="text-base md:text-lg font-serif font-medium text-gray-600"
-                  >
-                    Groceries
-                  </p>
-                  <h4
-                    class="text-lg md:text-xl lg:text-2xl font-medium group-hover:text-[#39A116] transition-colors duration-300"
-                  >
-                    Green Leafy plant
-                  </h4>
-                </div>
-                <div class="flex items-center gap-1">
-                  <img
-                    src="assets/Resuable/star.svg"
-                    alt="star"
-                    width="20"
-                    height="20"
-                    class="md:w-6 md:h-6"
-                  />
-                  <img
-                    src="assets/Resuable/star.svg"
-                    alt="star"
-                    width="20"
-                    height="20"
-                    class="md:w-6 md:h-6"
-                  />
-                  <img
-                    src="assets/Resuable/star.svg"
-                    alt="star"
-                    width="20"
-                    height="20"
-                    class="md:w-6 md:h-6"
-                  />
-                  <img
-                    src="assets/Resuable/star.svg"
-                    alt="star"
-                    width="20"
-                    height="20"
-                    class="md:w-6 md:h-6"
-                  />
-                  <img
-                    src="assets/Resuable/star.svg"
-                    alt="star"
-                    width="20"
-                    height="20"
-                    class="md:w-6 md:h-6"
-                  />
-                </div>
-                <h5 class="text-[#1A6109] font-semibold text-lg md:text-xl">
-                  $20.23
-                </h5>
-              </div>
-            </div>
-            <div class="flex flex-col gap-3 group">
-              <div
-                class="bg-[#E7E6E6] w-full px-6 py-4 h-[280px] md:h-[325px] flex items-center justify-center rounded-lg overflow-hidden relative group-hover:shadow-xl transition-all duration-300"
-              >
-                <img
-                  src="assets/Homepage/plant.png"
-                  alt="Green Leafy plant"
-                  class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500"
-                />
-                <button
-                  class="absolute bottom-4 right-4 bg-[#39A116] text-white p-3 rounded-full opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 hover:bg-[#2d8011]"
-                >
-                  <img
-                    src="assets/Resuable/cart.svg"
-                    alt=""
-                    width="20"
-                    height="20"
-                  />
-                </button>
-              </div>
-              <div class="flex flex-col items-center gap-2">
-                <div class="flex flex-col w-full items-center">
-                  <p
-                    class="text-base md:text-lg font-serif font-medium text-gray-600"
-                  >
-                    Groceries
-                  </p>
-                  <h4
-                    class="text-lg md:text-xl lg:text-2xl font-medium group-hover:text-[#39A116] transition-colors duration-300"
-                  >
-                    Green Leafy plant
-                  </h4>
-                </div>
-                <div class="flex items-center gap-1">
-                  <img
-                    src="assets/Resuable/star.svg"
-                    alt="star"
-                    width="20"
-                    height="20"
-                    class="md:w-6 md:h-6"
-                  />
-                  <img
-                    src="assets/Resuable/star.svg"
-                    alt="star"
-                    width="20"
-                    height="20"
-                    class="md:w-6 md:h-6"
-                  />
-                  <img
-                    src="assets/Resuable/star.svg"
-                    alt="star"
-                    width="20"
-                    height="20"
-                    class="md:w-6 md:h-6"
-                  />
-                  <img
-                    src="assets/Resuable/star.svg"
-                    alt="star"
-                    width="20"
-                    height="20"
-                    class="md:w-6 md:h-6"
-                  />
-                  <img
-                    src="assets/Resuable/star.svg"
-                    alt="star"
-                    width="20"
-                    height="20"
-                    class="md:w-6 md:h-6"
-                  />
-                </div>
-                <h5 class="text-[#1A6109] font-semibold text-lg md:text-xl">
-                  $20.23
+                  $3.99 / 100g
                 </h5>
               </div>
             </div>
@@ -1523,6 +944,11 @@
               class="btn-outline bg-transparent border border-[#39A116] text-[#39A116] w-14 h-10 flex items-center justify-center text-lg"
             >
               2
+            </button>
+            <button
+              class="btn-outline bg-transparent border border-[#39A116] text-[#39A116] w-14 h-10 flex items-center justify-center text-lg"
+            >
+              3
             </button>
             <button
               class="btn-outline bg-transparent border border-[#39A116] text-[#39A116] w-14 h-10 flex items-center justify-center text-lg"
@@ -1550,36 +976,30 @@
         let minVal = parseInt(minRange.value);
         let maxVal = parseInt(maxRange.value);
 
-        // Ensure min doesn't exceed max and vice versa
         if (minVal > maxVal) {
           [minRange.value, maxRange.value] = [maxRange.value, minRange.value];
           minVal = parseInt(minRange.value);
           maxVal = parseInt(maxRange.value);
         }
 
-        // Update input field values
         minInput.value = minVal;
         maxInput.value = maxVal;
 
-        // Calculate the percentage for the green range
-        const minPercent = (minVal / 1000) * 100;
-        const maxPercent = (maxVal / 1000) * 100;
+        const minPercent = (minVal / 600) * 100;
+        const maxPercent = (maxVal / 600) * 100;
 
-        // Update slider range to show only the green active area
         sliderRange.style.left = minPercent + "%";
         sliderRange.style.width = maxPercent - minPercent + "%";
       }
 
       function updateFromInput() {
         let minVal = parseInt(minInput.value) || 0;
-        let maxVal = parseInt(maxInput.value) || 1000;
+        let maxVal = parseInt(maxInput.value) || 600;
 
-        // Ensure valid ranges
         if (minVal < 0) minVal = 0;
-        if (maxVal > 1000) maxVal = 1000;
+        if (maxVal > 600) maxVal = 600;
         if (minVal > maxVal) minVal = maxVal;
 
-        // Update sliders
         minRange.value = minVal;
         maxRange.value = maxVal;
 
@@ -1591,7 +1011,6 @@
       minInput.addEventListener("input", updateFromInput);
       maxInput.addEventListener("input", updateFromInput);
 
-      // Initialize on page load
       updateSlider();
 
       // Hamburger Menu Toggle
@@ -1603,7 +1022,6 @@
         mobileMenu.classList.toggle("active");
       });
 
-      // Close menu when a link is clicked
       const mobileMenuLinks = mobileMenu.querySelectorAll("a");
       mobileMenuLinks.forEach((link) => {
         link.addEventListener("click", function () {
@@ -1612,7 +1030,6 @@
         });
       });
 
-      // Close menu when clicking outside
       document.addEventListener("click", function (event) {
         if (
           !hamburger.contains(event.target) &&
@@ -1628,19 +1045,16 @@
       const filterCloseMobile = document.getElementById("filterCloseMobile");
       const filterSidebar = document.getElementById("filterSidebar");
 
-      // Open filter sidebar
       filterToggleMobile.addEventListener("click", function () {
         filterSidebar.classList.add("active");
         document.body.style.overflow = "hidden";
       });
 
-      // Close filter sidebar
       filterCloseMobile.addEventListener("click", function () {
         filterSidebar.classList.remove("active");
         document.body.style.overflow = "auto";
       });
 
-      // Close filter when clicking outside (on mobile)
       document.addEventListener("click", function (event) {
         const isDesktop = window.innerWidth >= 1024;
         if (!isDesktop) {
@@ -1654,7 +1068,6 @@
         }
       });
 
-      // Handle window resize to reset filter state on desktop
       window.addEventListener("resize", function () {
         const isDesktop = window.innerWidth >= 1024;
         if (isDesktop) {
@@ -1667,12 +1080,10 @@
       const productCards = document.querySelectorAll(".grid .group");
       productCards.forEach((card) => {
         card.addEventListener("click", function (e) {
-          // Prevent navigation if cart button was clicked
           if (e.target.closest("button")) {
             e.stopPropagation();
             return;
           }
-          // Navigate to product individual page
           window.location.href = "product_individual.html";
         });
       });
@@ -1688,8 +1099,8 @@
             Subscribe To Our News letter
           </h3>
           <p class="text-white text-xs sm:text-sm lg:text-base leading-relaxed">
-            Sign up today Writing copy is time-consuming and difficult.
-            Headlime's artificial intelligence can take your thoughts.
+            Sign up today to get authentic recipes, health tips, and special
+            offers on our organic spices.
           </p>
         </div>
         <div
@@ -1739,7 +1150,7 @@
             </li>
             <li>
               <a
-                href=""
+                href="contact.html"
                 class="hover:text-white hover:translate-x-1 inline-block transition-all duration-300"
                 >Contact Us</a
               >
@@ -1754,27 +1165,27 @@
           </ul>
         </div>
         <div class="col-span-1">
-          <h4 class="text-xl lg:text-2xl font-semibold mb-4">About us</h4>
+          <h4 class="text-xl lg:text-2xl font-semibold mb-4">Categories</h4>
           <ul class="flex flex-col gap-2 text-base lg:text-lg text-gray-400">
             <li>
               <a
-                href=""
+                href="vegetables_fruits.html"
                 class="hover:text-white hover:translate-x-1 inline-block transition-all duration-300"
-                >Gallery</a
+                >Vegetables & Fruits</a
               >
             </li>
             <li>
               <a
-                href=""
+                href="dairy_products.html"
                 class="hover:text-white hover:translate-x-1 inline-block transition-all duration-300"
-                >Technologies</a
+                >Dairy & Honey</a
               >
             </li>
             <li>
               <a
-                href=""
+                href="spices_seasoning.html"
                 class="hover:text-white hover:translate-x-1 inline-block transition-all duration-300"
-                >Contacts</a
+                >Spices & Grains</a
               >
             </li>
           </ul>
@@ -1800,7 +1211,7 @@
               <a
                 href=""
                 class="hover:text-white hover:translate-x-1 inline-block transition-all duration-300"
-                >London</a
+                >Kathmandu, Nepal</a
               >
             </li>
           </ul>

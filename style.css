@@ -16,8 +16,8 @@ p {
 
 .bg-section-background {
   background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)),
-    url("assets/Homepage/pexels-quang-nguyen-vinh-222549-2153824.jpg") no-repeat
-      center;
+    url("../assets/Homepage/pexels-quang-nguyen-vinh-222549-2153824.jpg")
+      no-repeat center;
   background-size: cover;
 }
 
