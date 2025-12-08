@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Farmer Story - Organic Shop Nepal</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="tailwind.config.js"></script>
+    <!-- Marked.js for Markdown parsing -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  </head>
+  <body class="flex flex-col gap-8" data-story="">
+    <!-- NavBar -->
+    <nav class="px-6 py-8 flex items-center justify-between lg:px-12 lg:py-4">
+      <div class="flex items-center gap-2 lg:gap-6">
+        <a href="index.html">
+          <img
+            src="assets/Resuable/logo.svg"
+            alt="Organic Shop Nepal Logo"
+            width="43"
+            height="43"
+          />
+        </a>
+        <ul
+          id="navMenu"
+          class="hidden lg:flex items-center gap-6 text-xl font-semibold leading-5 tracking-wide"
+        >
+          <li>
+            <a
+              href="index.html"
+              class="hover:text-[#39A116] transition-colors duration-300"
+              >Shop</a
+            >
+          </li>
+          <li>
+            <a
+              href="product.html"
+              class="hover:text-[#39A116] transition-colors duration-300"
+              >Products</a
+            >
+          </li>
+          <li>
+            <a
+              href="gallery.html"
+              class="hover:text-[#39A116] transition-colors duration-300"
+              >Gallery</a
+            >
+          </li>
+          <li>
+            <a
+              href="farmers_stoties.html"
+              class="text-[#39A116] border-b-2 border-[#39A116] pb-1"
+              >Farmers Stories</a
+            >
+          </li>
+          <li>
+            <a
+              href="blogs.html"
+              class="hover:text-[#39A116] transition-colors duration-300"
+              >Blogs</a
+            >
+          </li>
+          <li>
+            <a
+              href="contact.html"
+              class="hover:text-[#39A116] transition-colors duration-300"
+              >Contact</a
+            >
+          </li>
+        </ul>
+      </div>
+
+      <div class="flex items-center gap-2 lg:gap-4">
+        <div
+          class="hidden lg:flex w-[254px] px-2.5 py-1.5 bg-[#E8E8E8] rounded-full gap-2.5"
+        >
+          <img
+            src="assets/Resuable/search.svg"
+            alt="Search Icon"
+            width="20"
+            height="20"
+          />
+          <input
+            type="text"
+            placeholder="Search Product..."
+            class="text-lg placeholder:text-muted outline-0 border-0 flex-1 w-full bg-transparent"
+          />
+        </div>
+
+        <a
+          href="cart.html"
+          class="rounded-full p-2.5 flex items-center justify-center bg-primary-800 hover:bg-[#2d8011] transition-colors duration-300"
+        >
+          <img
+            src="assets/Resuable/cart.svg"
+            alt="Cart Icon"
+            width="20"
+            height="20"
+          />
+        </a>
+
+        <a
+          href="login.html"
+          class="rounded-full p-2.5 flex items-center justify-center bg-primary-800 hover:bg-[#2d8011] transition-colors duration-300"
+        >
+          <img
+            src="assets/Resuable/person.svg"
+            alt="Account Icon"
+            width="20"
+            height="20"
+          />
+        </a>
+
+        <!-- Hamburger Menu Icon -->
+        <button
+          id="hamburger"
+          class="lg:hidden flex flex-col gap-1.5 p-2 focus:outline-none"
+        >
+          <span
+            class="block w-6 h-0.5 bg-black transition-transform duration-300"
+          ></span>
+          <span
+            class="block w-6 h-0.5 bg-black transition-opacity duration-300"
+          ></span>
+          <span
+            class="block w-6 h-0.5 bg-black transition-transform duration-300"
+          ></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu">
+      <ul class="flex flex-col gap-4 p-4">
+        <li>
+          <a href="index.html">Shop</a>
+        </li>
+        <li>
+          <a href="product.html">Products</a>
+        </li>
+        <li>
+          <a href="gallery.html">Gallery</a>
+        </li>
+        <li>
+          <a href="farmers_stoties.html">Farmers Stories</a>
+        </li>
+        <li>
+          <a href="blogs.html">Blogs</a>
+        </li>
+        <li>
+          <a href="contact.html">Contact</a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Farmer Hero Section -->
+    <section class="px-6 py-8 lg:px-12 lg:py-6">
+      <div class="max-w-7xl mx-auto">
+        <!-- Breadcrumb -->
+        <nav class="text-base lg:text-xl mb-6">
+          <a href="index.html" class="hover:text-primary-700 transition-colors"
+            >Home</a
+          >
+          <span class="mx-2">/</span>
+          <a
+            href="farmers_stoties.html"
+            class="hover:text-primary-700 transition-colors"
+            >Farmers Stories</a
+          >
+          <span class="mx-2">/</span>
+          <span class="text-muted" id="breadcrumb-name">Farmer Name</span>
+        </nav>
+
+        <!-- Hero Banner -->
+        <div class="relative rounded-3xl overflow-hidden">
+          <img
+            id="heroImage"
+            src="assets/Homepage/pexels-quang-nguyen-vinh-222549-2153824.jpg"
+            alt="Farm Hero"
+            class="w-full h-[300px] lg:h-[450px] object-cover"
+          />
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-dark/80 via-dark/30 to-transparent"
+          ></div>
+          <div class="absolute bottom-0 left-0 right-0 p-6 lg:p-10">
+            <div class="flex items-center gap-3 mb-4">
+              <span
+                id="farmerBadge"
+                class="px-4 py-1.5 bg-primary-700 text-white text-sm font-medium rounded-full"
+              >
+                Partner Farmer
+              </span>
+              <span
+                id="locationBadge"
+                class="px-4 py-1.5 bg-white/20 text-white text-sm font-medium rounded-full"
+              >
+                Location
+              </span>
+            </div>
+            <h1
+              id="farmerName"
+              class="text-3xl lg:text-5xl font-bold text-white mb-2"
+            >
+              Loading...
+            </h1>
+            <p id="farmerTitle" class="text-white/80 text-lg">Organic Farmer</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Farmer Profile Section -->
+    <section class="px-6 py-8 lg:px-12 lg:py-6">
+      <div class="max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <!-- Main Content -->
+          <div class="lg:col-span-2">
+            <!-- Farmer Story - Markdown Content -->
+            <div class="bg-white rounded-2xl p-6 lg:p-8 shadow-card mb-8">
+              <div id="storyContent" class="prose max-w-none">
+                <!-- Markdown content will be rendered here -->
+                <div class="text-center py-12">
+                  <div class="animate-pulse flex flex-col items-center">
+                    <div class="h-8 w-64 bg-gray-200 rounded mb-4"></div>
+                    <div class="h-4 w-full bg-gray-200 rounded mb-2"></div>
+                    <div class="h-4 w-full bg-gray-200 rounded mb-2"></div>
+                    <div class="h-4 w-3/4 bg-gray-200 rounded"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Video Section -->
+            <div class="bg-white rounded-2xl p-6 lg:p-8 shadow-card">
+              <h2 class="text-2xl font-bold text-dark mb-6">Watch My Story</h2>
+              <div
+                class="relative rounded-xl overflow-hidden bg-gray-100 aspect-video flex items-center justify-center"
+              >
+                <img
+                  id="videoThumbnail"
+                  src="assets/Homepage/pexels-quang-nguyen-vinh-222549-2153824.jpg"
+                  alt="Video Thumbnail"
+                  class="w-full h-full object-cover"
+                />
+                <div
+                  class="absolute inset-0 bg-dark/40 flex items-center justify-center"
+                >
+                  <button
+                    class="w-20 h-20 bg-white rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform duration-300"
+                  >
+                    <svg
+                      class="w-8 h-8 text-primary-700 ml-1"
+                      fill="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path d="M8 5v14l11-7z" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <p class="text-muted text-sm mt-4 text-center">
+                A day in the life of an organic farmer
+              </p>
+            </div>
+          </div>
+
+          <!-- Sidebar -->
+          <div class="lg:col-span-1">
+            <!-- Farmer Info Card -->
+            <div class="bg-white rounded-2xl p-6 shadow-card mb-6 sticky top-6">
+              <div class="text-center mb-6">
+                <img
+                  id="profileImage"
+                  src="assets/Homepage/profile.jpg"
+                  alt="Farmer Profile"
+                  class="w-32 h-32 rounded-full object-cover mx-auto mb-4 border-4 border-primary-100"
+                />
+                <h3 id="sidebarName" class="text-xl font-bold text-dark">
+                  Farmer Name
+                </h3>
+                <p id="sidebarTitle" class="text-primary-700 font-medium">
+                  Organic Farmer
+                </p>
+              </div>
+
+              <div class="space-y-4">
+                <div class="flex items-center gap-3">
+                  <div
+                    class="w-10 h-10 bg-primary-100 rounded-full flex items-center justify-center"
+                  >
+                    <svg
+                      class="w-5 h-5 text-primary-700"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                      ></path>
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <div>
+                    <p class="text-sm text-muted">Location</p>
+                    <p id="locationText" class="font-medium text-dark">
+                      Location
+                    </p>
+                  </div>
+                </div>
+
+                <div class="flex items-center gap-3">
+                  <div
+                    class="w-10 h-10 bg-primary-100 rounded-full flex items-center justify-center"
+                  >
+                    <svg
+                      class="w-5 h-5 text-primary-700"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <div>
+                    <p class="text-sm text-muted">Experience</p>
+                    <p id="experienceText" class="font-medium text-dark">
+                      Experience
+                    </p>
+                  </div>
+                </div>
+
+                <div class="flex items-center gap-3">
+                  <div
+                    class="w-10 h-10 bg-primary-100 rounded-full flex items-center justify-center"
+                  >
+                    <svg
+                      class="w-5 h-5 text-primary-700"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <div>
+                    <p class="text-sm text-muted">Farm Size</p>
+                    <p id="farmSizeText" class="font-medium text-dark">
+                      Farm Size
+                    </p>
+                  </div>
+                </div>
+
+                <div class="flex items-center gap-3">
+                  <div
+                    class="w-10 h-10 bg-primary-100 rounded-full flex items-center justify-center"
+                  >
+                    <svg
+                      class="w-5 h-5 text-primary-700"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <div>
+                    <p class="text-sm text-muted">Certification</p>
+                    <p id="certificationText" class="font-medium text-dark">
+                      Certification
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="border-t border-gray-200 mt-6 pt-6">
+                <h4 class="font-semibold text-dark mb-3">Products Grown</h4>
+                <div id="productsContainer" class="flex flex-wrap gap-2">
+                  <span
+                    class="px-3 py-1 bg-primary-100 text-primary-700 text-sm rounded-full"
+                    >Loading...</span
+                  >
+                </div>
+              </div>
+
+              <a
+                href="product.html"
+                class="w-full mt-6 py-3 px-6 bg-primary-700 text-white font-semibold rounded-xl hover:bg-primary-800 transition-all duration-300 flex items-center justify-center gap-2"
+              >
+                <svg
+                  class="w-5 h-5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"
+                  ></path>
+                </svg>
+                Shop Products
+              </a>
+            </div>
+
+            <!-- Stats Card -->
+            <div class="bg-primary-700 rounded-2xl p-6 text-white">
+              <h4 class="font-bold text-lg mb-4">Impact Numbers</h4>
+              <div class="grid grid-cols-2 gap-4">
+                <div class="text-center">
+                  <p id="statCustomers" class="text-3xl font-bold">--</p>
+                  <p class="text-white/70 text-sm">Customers Served</p>
+                </div>
+                <div class="text-center">
+                  <p id="statYears" class="text-3xl font-bold">--</p>
+                  <p class="text-white/70 text-sm">Years Organic</p>
+                </div>
+                <div class="text-center">
+                  <p id="statVarieties" class="text-3xl font-bold">--</p>
+                  <p class="text-white/70 text-sm">Product Varieties</p>
+                </div>
+                <div class="text-center">
+                  <p id="statChemicalFree" class="text-3xl font-bold">--</p>
+                  <p class="text-white/70 text-sm">Chemical Free</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Other Farmers Section -->
+    <section class="px-6 py-8 lg:px-12 lg:py-6 bg-[#f8f6f3]">
+      <div class="max-w-7xl mx-auto">
+        <div class="flex items-center justify-between mb-8">
+          <h2 class="text-2xl lg:text-3xl font-bold text-dark">
+            Meet Other Farmers
+          </h2>
+          <a
+            href="farmers_stoties.html"
+            class="text-primary-700 font-semibold hover:underline flex items-center gap-2"
+          >
+            View All
+            <svg
+              class="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 5l7 7-7 7"
+              ></path>
+            </svg>
+          </a>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Farmer Card 1 -->
+          <a
+            href="farmer_story_markdown.html?story=hari-prasad-sharma.md"
+            class="group"
+          >
+            <div
+              class="bg-white rounded-2xl overflow-hidden shadow-card hover:shadow-lg transition-all duration-300"
+            >
+              <div class="relative overflow-hidden">
+                <img
+                  src="assets/Homepage/pexels-quang-nguyen-vinh-222549-2153824.jpg"
+                  alt="Farmer"
+                  class="w-full h-52 object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+                <div class="absolute top-4 left-4">
+                  <span
+                    class="px-3 py-1 bg-primary-700 text-white text-xs font-medium rounded-full"
+                  >
+                    Kavre
+                  </span>
+                </div>
+              </div>
+              <div class="p-6">
+                <div class="flex items-center gap-4 mb-4">
+                  <img
+                    src="assets/Homepage/profile.jpg"
+                    alt="Farmer"
+                    class="w-14 h-14 rounded-full object-cover border-2 border-primary-100"
+                  />
+                  <div>
+                    <h3
+                      class="text-lg font-bold text-dark group-hover:text-primary-700 transition-colors"
+                    >
+                      Hari Prasad Sharma
+                    </h3>
+                    <p class="text-muted text-sm">Organic Vegetable Farmer</p>
+                  </div>
+                </div>
+                <p class="text-muted text-sm line-clamp-2">
+                  15+ years of experience growing organic vegetables in Kavre
+                  district.
+                </p>
+              </div>
+            </div>
+          </a>
+
+          <!-- Farmer Card 2 -->
+          <a
+            href="farmer_story_markdown.html?story=kamala-devi-tamang.md"
+            class="group"
+          >
+            <div
+              class="bg-white rounded-2xl overflow-hidden shadow-card hover:shadow-lg transition-all duration-300"
+            >
+              <div class="relative overflow-hidden">
+                <img
+                  src="assets/Homepage/pexels-pixabay-533982.jpg"
+                  alt="Farmer"
+                  class="w-full h-52 object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+                <div class="absolute top-4 left-4">
+                  <span
+                    class="px-3 py-1 bg-primary-700 text-white text-xs font-medium rounded-full"
+                  >
+                    Nuwakot
+                  </span>
+                </div>
+              </div>
+              <div class="p-6">
+                <div class="flex items-center gap-4 mb-4">
+                  <img
+                    src="assets/Homepage/profile.jpg"
+                    alt="Farmer"
+                    class="w-14 h-14 rounded-full object-cover border-2 border-primary-100"
+                  />
+                  <div>
+                    <h3
+                      class="text-lg font-bold text-dark group-hover:text-primary-700 transition-colors"
+                    >
+                      Kamala Devi Tamang
+                    </h3>
+                    <p class="text-muted text-sm">Organic Dairy Farmer</p>
+                  </div>
+                </div>
+                <p class="text-muted text-sm line-clamp-2">
+                  Running a successful organic dairy farm in the hills of
+                  Nuwakot, supplying fresh milk and ghee.
+                </p>
+              </div>
+            </div>
+          </a>
+
+          <!-- Farmer Card 3 -->
+          <a href="farmers_stoties.html" class="group">
+            <div
+              class="bg-white rounded-2xl overflow-hidden shadow-card hover:shadow-lg transition-all duration-300"
+            >
+              <div class="relative overflow-hidden">
+                <img
+                  src="assets/Homepage/honey-dripping-from-dipper.jpg"
+                  alt="Farmer"
+                  class="w-full h-52 object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+                <div class="absolute top-4 left-4">
+                  <span
+                    class="px-3 py-1 bg-primary-700 text-white text-xs font-medium rounded-full"
+                  >
+                    Chitwan
+                  </span>
+                </div>
+              </div>
+              <div class="p-6">
+                <div class="flex items-center gap-4 mb-4">
+                  <img
+                    src="assets/Homepage/profile.jpg"
+                    alt="Farmer"
+                    class="w-14 h-14 rounded-full object-cover border-2 border-primary-100"
+                  />
+                  <div>
+                    <h3
+                      class="text-lg font-bold text-dark group-hover:text-primary-700 transition-colors"
+                    >
+                      Bishnu Bahadur Rai
+                    </h3>
+                    <p class="text-muted text-sm">Honey Producer</p>
+                  </div>
+                </div>
+                <p class="text-muted text-sm line-clamp-2">
+                  Third-generation beekeeper producing pure, raw honey from the
+                  forests of Chitwan.
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="px-6 py-8 lg:px-12 lg:py-6">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-3xl lg:text-4xl font-bold text-dark mb-4">
+          Become a Partner Farmer
+        </h2>
+        <p class="text-muted text-lg mb-8">
+          Are you an organic farmer looking for a reliable market for your
+          produce? Join our network of partner farmers and connect with
+          customers who value quality organic products.
+        </p>
+        <a
+          href="contact.html"
+          class="inline-flex items-center gap-2 px-8 py-4 bg-primary-700 text-white font-semibold rounded-full hover:bg-primary-800 transition-all duration-300 transform hover:scale-105"
+        >
+          <svg
+            class="w-5 h-5"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
+            ></path>
+          </svg>
+          Contact Us
+        </a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="px-6 py-8 lg:px-12 lg:py-6 bg-black">
+      <div
+        class="flex flex-col lg:flex-row w-full justify-between items-start lg:items-center border-b border-white/20 pb-8 gap-6"
+      >
+        <div class="flex flex-col gap-3 sm:gap-6 max-w-full lg:max-w-[500px]">
+          <h3 class="text-xl sm:text-2xl lg:text-3xl font-bold text-white">
+            Subscribe To Our News letter
+          </h3>
+          <p class="text-white text-xs sm:text-sm lg:text-base leading-relaxed">
+            Sign up today Writing copy is time-consuming and difficult.
+            Headlime's artificial intelligence can take your thoughts.
+          </p>
+        </div>
+        <div
+          class="flex flex-col w-full sm:flex-row lg:w-[450px] rounded-lg sm:rounded-full overflow-hidden bg-white py-3 px-4 sm:py-2 sm:px-2 gap-3 sm:gap-0"
+        >
+          <input
+            type="text"
+            placeholder="Enter email address"
+            class="flex-1 rounded-md sm:rounded-l-full px-3 sm:px-4 focus:outline-0 border-0 text-xs sm:text-sm lg:text-base py-2 sm:py-0"
+          />
+          <button
+            class="bg-[#39A116] py-2 sm:py-3 px-4 sm:px-4 lg:px-6 text-white text-xs sm:text-sm lg:text-base font-bold rounded-md sm:rounded-full hover:bg-[#2d8011] transition-colors duration-300 whitespace-nowrap"
+          >
+            Get Listed
+          </button>
+        </div>
+      </div>
+
+      <div
+        class="grid grid-cols-2 lg:grid-cols-4 w-full py-8 text-white gap-8 lg:gap-4"
+      >
+        <div class="col-span-2 lg:col-span-1">
+          <img
+            src="assets/Resuable/logo.svg"
+            alt=""
+            width="64"
+            height="64"
+            class="hover:opacity-80 transition-opacity duration-300"
+          />
+        </div>
+        <div class="col-span-1">
+          <h4 class="text-xl lg:text-2xl font-semibold mb-4">INFO</h4>
+          <ul class="flex flex-col gap-2 text-base lg:text-lg text-gray-400">
+            <li>
+              <a
+                href="about_us.html"
+                class="hover:text-white hover:translate-x-1 inline-block transition-all duration-300"
+                >About Us</a
+              >
+            </li>
+            <li>
+              <a
+                href="blogs.html"
+                class="hover:text-white hover:translate-x-1 inline-block transition-all duration-300"
+                >Blog</a
+              >
+            </li>
+            <li>
+              <a
+                href="contact.html"
+                class="hover:text-white hover:translate-x-1 inline-block transition-all duration-300"
+                >Contact Us</a
+              >
+            </li>
+            <li>
+              <a
+                href=""
+                class="hover:text-white hover:translate-x-1 inline-block transition-all duration-300"
+                >FAQs</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="col-span-1">
+          <h4 class="text-xl lg:text-2xl font-semibold mb-4">About us</h4>
+          <ul class="flex flex-col gap-2 text-base lg:text-lg text-gray-400">
+            <li>
+              <a
+                href="gallery.html"
+                class="hover:text-white hover:translate-x-1 inline-block transition-all duration-300"
+                >Gallery</a
+              >
+            </li>
+            <li>
+              <a
+                href=""
+                class="hover:text-white hover:translate-x-1 inline-block transition-all duration-300"
+                >Technologies</a
+              >
+            </li>
+            <li>
+              <a
+                href="contact.html"
+                class="hover:text-white hover:translate-x-1 inline-block transition-all duration-300"
+                >Contacts</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="col-span-2 lg:col-span-1">
+          <h4 class="text-xl lg:text-2xl font-semibold mb-4">Contact us</h4>
+          <ul class="flex flex-col gap-2 text-base lg:text-lg text-gray-400">
+            <li>
+              <a
+                href="tel:+19999999999"
+                class="hover:text-white hover:translate-x-1 inline-block transition-all duration-300"
+                >+1 (999) 999-99-99</a
+              >
+            </li>
+            <li>
+              <a
+                href="mailto:hello@logoipsum.com"
+                class="hover:text-white hover:translate-x-1 inline-block transition-all duration-300"
+                >hello@logoipsum.com</a
+              >
+            </li>
+            <li>
+              <a
+                href=""
+                class="hover:text-white hover:translate-x-1 inline-block transition-all duration-300"
+                >London</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div
+        class="flex flex-col md:flex-row items-center w-full justify-between gap-6 pt-6 border-t border-white/20"
+      >
+        <div class="flex items-center gap-3">
+          <a
+            href=""
+            class="p-2.5 flex items-center justify-center border-2 border-gray-600 rounded-full hover:border-white hover:bg-white hover:scale-110 transition-all duration-300 group"
+          >
+            <img
+              src="assets/Homepage/fb.svg"
+              alt="Facebook"
+              width="16"
+              height="16"
+              class="group-hover:brightness-0"
+            />
+          </a>
+          <a
+            href=""
+            class="p-2.5 flex items-center justify-center border-2 border-gray-600 rounded-full hover:border-white hover:bg-white hover:scale-110 transition-all duration-300 group"
+          >
+            <img
+              src="assets/Homepage/fb.svg"
+              alt="Twitter"
+              width="16"
+              height="16"
+              class="group-hover:brightness-0"
+            />
+          </a>
+
+          <a
+            href=""
+            class="p-2.5 flex items-center justify-center border-2 border-gray-600 rounded-full hover:border-white hover:bg-white hover:scale-110 transition-all duration-300 group"
+          >
+            <img
+              src="assets/Homepage/fb.svg"
+              alt="Instagram"
+              width="16"
+              height="16"
+              class="group-hover:brightness-0"
+            />
+          </a>
+
+          <a
+            href=""
+            class="p-2.5 flex items-center justify-center border-2 border-gray-600 rounded-full hover:border-white hover:bg-white hover:scale-110 transition-all duration-300 group"
+          >
+            <img
+              src="assets/Homepage/fb.svg"
+              alt="LinkedIn"
+              width="16"
+              height="16"
+              class="group-hover:brightness-0"
+            />
+          </a>
+          <a
+            href=""
+            class="p-2.5 flex items-center justify-center border-2 border-gray-600 rounded-full hover:border-white hover:bg-white hover:scale-110 transition-all duration-300 group"
+          >
+            <img
+              src="assets/Homepage/fb.svg"
+              alt="YouTube"
+              width="16"
+              height="16"
+              class="group-hover:brightness-0"
+            />
+          </a>
+        </div>
+
+        <p class="text-gray-400 text-sm lg:text-base">© 2023 — Copyright</p>
+      </div>
+    </footer>
+
+    <script src="main.js"></script>
+    <script src="farmer-story-renderer.js"></script>
+    <script>
+      // Initialize farmer story renderer
+      document.addEventListener("DOMContentLoaded", function () {
+        // Get story filename from URL parameter
+        const urlParams = new URLSearchParams(window.location.search);
+        const storyFile = urlParams.get("story");
+
+        if (storyFile) {
+          const renderer = new FarmerStoryRenderer("storyContent");
+          renderer.loadStory(storyFile);
+        } else {
+          // Default story if none specified
+          const renderer = new FarmerStoryRenderer("storyContent");
+          renderer.loadStory("hari-prasad-sharma.md");
+        }
+      });
+    </script>
+  </body>
+</html>
