@@ -86,10 +86,10 @@ export default function Footer() {
             </li>
             <li>
               <a
-                href="mailto:hello@organicshopnepal.com"
+                href="mailto:hello@farmcommerce.com"
                 className="hover:text-white hover:translate-x-1 inline-block transition-all duration-300"
               >
-                hello@organicshopnepal.com
+                hello@farmcommerce.com
               </a>
             </li>
             <li>
@@ -119,7 +119,7 @@ export default function Footer() {
             </a>
           ))}
         </div>
-        <p className="text-gray-400 text-sm lg:text-base">© 2024 — Organic Shop Nepal</p>
+        <p className="text-gray-400 text-sm lg:text-base">© 2025 — Farm Commerce</p>
       </div>
     </footer>
   );

@@ -17,7 +17,7 @@ export default function ImageUploadPage() {
   const [uploading, setUploading] = useState(false);
   const [uploaded, setUploaded] = useState<UploadedFile[]>([]);
   const [error, setError] = useState<string | null>(null);
-  const [folder, setFolder] = useState("/organic-shop-nepal/products");
+  const [folder, setFolder] = useState("/farm-commerce/products");
   const [dragOver, setDragOver] = useState(false);
   const inputRef = useRef<HTMLInputElement>(null);
 
@@ -100,11 +100,11 @@ export default function ImageUploadPage() {
                 onChange={(e) => setFolder(e.target.value)}
                 className="border border-gray-300 rounded-lg px-4 py-3 text-base focus:outline-none focus:border-[#39A116] transition-colors bg-white"
               >
-                <option value="/organic-shop-nepal/products">Products</option>
-                <option value="/organic-shop-nepal/gallery">Gallery</option>
-                <option value="/organic-shop-nepal/banners">Banners</option>
-                <option value="/organic-shop-nepal/farmers">Farmer Stories</option>
-                <option value="/organic-shop-nepal/blogs">Blog Images</option>
+                <option value="/farm-commerce/products">Products</option>
+                <option value="/farm-commerce/gallery">Gallery</option>
+                <option value="/farm-commerce/banners">Banners</option>
+                <option value="/farm-commerce/farmers">Farmer Stories</option>
+                <option value="/farm-commerce/blogs">Blog Images</option>
               </select>
             </div>
           </div>

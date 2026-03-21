@@ -50,7 +50,7 @@ const blogs = [
   {
     slug: "farmers-partner-program",
     title: "How Our Farmers Partner Program is Changing Lives",
-    author: "Organic Shop Nepal Team",
+    author: "Farm Commerce Team",
     date: "February 15, 2024",
     category: "Community",
     excerpt: "Meet the farmers behind your food and learn how our direct partnership model ensures fair prices and sustainable farming practices.",

@@ -18,7 +18,7 @@ export default function ContactPage() {
           {[
             { icon: "📍", title: "Address", value: "Thamel, Kathmandu, Nepal" },
             { icon: "📞", title: "Phone", value: "+977-1-4123456" },
-            { icon: "✉️", title: "Email", value: "hello@organicshopnepal.com" },
+            { icon: "✉️", title: "Email", value: "hello@farmcommerce.com" },
             { icon: "🕒", title: "Hours", value: "Mon–Sat: 8am – 8pm" },
           ].map((item) => (
             <div key={item.title} className="flex items-start gap-4 p-4 bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow">

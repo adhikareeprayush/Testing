@@ -80,7 +80,7 @@ export default async function FarmerStoryPage({ params }: Props) {
 
             <h2 className="text-2xl md:text-3xl font-bold text-dark">Partnering with <span className="text-primary-700">Farm Commerce</span></h2>
             <p>
-              Joining the Organic Shop Nepal partner program was a game-changer. Before, I struggled to find buyers
+              Joining the Farm Commerce partner program was a game-changer. Before, I struggled to find buyers
               who would pay fair prices for my organic produce. Now I have a direct channel to thousands of customers
               who understand and appreciate the value of truly organic food.
             </p>

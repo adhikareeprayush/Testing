@@ -267,7 +267,7 @@ export default async function HomePage() {
           <div className="flex py-8 md:py-12 gap-4 md:gap-6 flex-col bg-white w-full max-w-[350px] items-center px-4 md:px-3 shadow-lg rounded-xl hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 animate-slide-in-right">
             <StarRating type="yellow" />
             <p className="text-base md:text-lg lg:text-xl text-gray-600 text-center leading-relaxed">
-              The delivery was so fast and everything was packaged beautifully. Best organic shopping experience I've had!
+              The delivery was so fast and everything was packaged beautifully. Best experience I&apos;ve had with Farm Commerce!
             </p>
             <div className="flex items-center gap-3 group">
               <Image src="/assets/Homepage/profile.jpg" alt="Sita Sharma" width={55} height={55}
